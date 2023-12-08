@@ -1,0 +1,218 @@
+<body class="crm_body_bg">
+  <nav
+  class="sidebar vertical-scroll dark_sidebar ps-container ps-theme-default ps-active-y"
+>
+  <div class="logo d-flex justify-content-between">
+    <a href="#"
+      ><img style="width: 40px" src="img/qc.png" alt="" />
+      <span
+        style="
+          padding-left: 10px;
+          margin-top: 80px;
+          color: #fff;
+          font: 900;
+          font-size: 16px;
+        "
+        >Study Abroad</span
+      ></a
+    >
+    <div class="sidebar_close_icon d-lg-none">
+      <i class="ti-close"></i>
+    </div>
+  </div>
+  <ul id="sidebar_menu">
+    <li class="active">
+      <a class="active" href="/dashboard" aria-expanded="false">
+        <div class="icon_menu">
+          <img src="img/menu-icon/dashboard.svg" alt="" />
+        </div>
+        <span>Dashboard</span>
+      </a>
+    </li>
+
+     <li class="active">
+      <a class="active" href="/form1" aria-expanded="false">
+        <div class="icon_menu">
+          <img src="img/menu-icon/dashboard.svg" alt="" />
+        </div>
+        <span>Create Application</span>
+      </a>
+    </li>
+    <li class="active">
+      <a class="active" href="/applicationstatus" aria-expanded="false">
+        <div class="icon_menu">
+          <img src="img/menu-icon/dashboard.svg" alt="" />
+        </div>
+        <span>Application Status</span>
+      </a>
+    </li>
+    <li class="active">
+      <a class="active" href="/applicationdetails" aria-expanded="false">
+        <div class="icon_menu">
+          <img src="img/menu-icon/dashboard.svg" alt="" />
+        </div>
+        <span>Application Details</span>
+      </a>
+    </li>
+    <li class="active">
+      <a href="/logout" aria-expanded="false">
+        <div class="icon_menu">
+          <img src="img/menu-icon/dashboard.svg" alt="" />
+        </div>
+        <span>Sign Out</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+  <section class="main_content dashboard_part large_header_bg">
+    <div class="container-fluid g-0">
+      <div class="row">
+        <div class="col-lg-12 p-0">
+          <div
+            class="header_iner d-flex justify-content-between align-items-center"
+          >
+            <div class="sidebar_icon d-lg-none">
+              <i class="ti-menu"></i>
+            </div>
+            <div class="serach_field-area d-flex align-items-center">
+              <div class="search_inner">
+                <form action="#">
+                  <div class="search_field">
+                    <input type="text" placeholder="Search here..." />
+                  </div>
+                  <button type="submit">
+                    <img src="img/icon/icon_search.svg" alt="" />
+                  </button>
+                </form>
+              </div>
+              <span class="f_s_14 f_w_400 ml_25 white_text text_white"
+                >Apps</span
+              >
+            </div>
+            <div
+              class="header_right d-flex justify-content-between align-items-center"
+            >
+            
+              <div class="profile_info">
+                <img src="img/client_img.png" alt="#" />
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main_content_iner overly_inner">
+      <div class="container-fluid p-0">
+        <div class="row">
+          <div class="col-12">
+            <div
+              class="page_title_box d-flex align-items-center justify-content-between"
+            >
+              <div class="page_title_left">
+                <h3 class="f_s_30 f_w_700 text_white">Application Status</h3>
+              </div>
+              <!-- <a href="/logout" class="white_btn3">Create Report</a> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-12">
+            <div class="white_card card_height_100 mb_30">
+              <div class="white_card_header">
+                <div class="box_header m-0">
+                  <div class="main-title">
+                    <h3 class="m-0">Once Processing fee has been confirmed you can proceed with application</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="white_card_body">
+                <div class="QA_section">
+                  <div class="white_box_tittle list_header">
+                    <h4>Applications</h4>
+                    <div class="box_right d-flex lms_block">
+                      <div class="add_button ms-2">
+                        <a
+                          href="/form1"
+                          data-bs-toggle="modal"
+                          data-bs-target="#addcategory"
+                          class="btn_1"
+                          >Add New application</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="QA_table mb_30">
+                    <table class="table lms_table_active">
+                      <thead>
+                        <tr>
+                          <th scope="col">application Number</th>
+                          <th scope="col">Category</th>
+                       
+                          <th scope="col">Country</th>
+                          <th scope="col">Program</th>
+                          <th scope="col">Payment Status</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <% userApplications.forEach(application => { %>
+                        <tr>
+                          <th scope="row">
+                            <a href="#" class="question_content">
+                              <%= application.application_number %></a
+                            >
+                          </th>
+                          <td>Single Application</td>
+                          
+                          <td> <%= application.study_country %></td>
+                          <td> <%= application.program_of_study %></td>
+                         
+                          <td>
+                            <span class="<%= application.has_paid_fee ? 'text-success' : 'text-warning' %> fs-7 fw-semibold">
+                              <%= application.has_paid_fee ? 'Confirmed' : 'Pending' %>
+                            </span>
+                          </td>
+                          <td> 
+                            <% if (application.has_paid_fee) { %>
+                              <a href="/form2?appId=<%= application._id %>" class="">Complete Application</a>
+                            <% } %>
+                        </td>
+
+                        </tr>
+                        <% }); %>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12"></div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="footer_part">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="footer_iner text-center">
+              <p>
+                ©
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                2023 - Designed by
+                <a href="https://edu-central.org">eduCENTRAL</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>

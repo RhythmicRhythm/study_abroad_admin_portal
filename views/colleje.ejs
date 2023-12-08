@@ -1,0 +1,357 @@
+<form action="/register" method="post">
+    <!-- ROW 1 -->
+  
+    <div class="main-title mb_30 pt_30">
+        <h3 class="m-0">Part 1: Personal Data</h3>
+      </div>
+    <div class="row justify-content-between text-left">
+      <div class="form-group col-sm-6 flex-column d-flex">
+        <label class="text-start">Firstname</label>
+        <input
+          type="text"
+          id="studentFirstname"
+          name="studentFirstname"
+          placeholder="Enter Firstname"
+          value="<%= typeof studentFirstname != 'undefined' ? studentFirstname : '' %>"
+          required
+        />
+      </div>
+      <div class="form-group col-sm-6 flex-column d-flex">
+        <label class="text-start">Lastname</label>
+        <input
+          type="text"
+          id="studentLastname"
+          name="studentLastname"
+          placeholder="Enter studentLastname"
+          value="<%= typeof studentLastname != 'undefined' ? studentLastname : '' %>"
+          required
+        />
+      </div>
+    </div>
+    <!-- ROW 2 -->
+    <div class="row justify-content-between text-left">
+      <div class="form-group col-sm-6 flex-column d-flex">
+        <label class="text-start"
+          >Middlename
+          <span class="text-muted">(optional)</span>
+        </label>
+        <input
+          type="text"
+          id="studentMiddlename"
+          name="studentMiddlename"
+          placeholder="Enter studentMiddlename"
+          value="<%= typeof studentMiddlename != 'undefined' ? studentMiddlename : '' %>"
+         
+        />
+      </div>
+      <div class="form-group col-sm-6 flex-column d-flex">
+        <label class="text-start">Date Of Birth</label>
+        <input
+          type="date"
+          id="dateOfBirth"
+          name="dateOfBirth"
+          value="<%= typeof dateOfBirth != 'undefined' ? dateOfBirth : '' %>"
+          required
+        />
+      </div>
+    </div>
+    <!-- ROW 3 -->
+
+    <!-- ROW 4 -->
+    <div class="row justify-content-between text-left">
+      <div class="form-group col-sm-6 flex-column d-flex">
+        <label class="text-start">Marital Status</label>
+        <select
+          class="form-select"
+          id="marital_stattus"
+          name="marital_status"
+          required
+        >
+          <option value="">select</option>
+          <option value="Married">Married</option>
+          <option value="Single">Single</option>
+        </select>
+      </div>
+      <div class="form-group col-sm-6 flex-column d-flex">
+        <label class="text-start">nationality</label>
+        <input
+          type="text"
+          id="nationality"
+          name="nationality"
+          placeholder="Enter Nationality"
+          value="<%= typeof nationality != 'undefined' ? nationality : '' %>"
+          required
+        />
+    </div>
+    </div>
+
+ 
+    <!-- ROW 7 -->
+    <div class="row justify-content-between text-left">
+      <div class="form-group col-sm-6 flex-column d-flex">
+        <label class="text-start">State Of Origin</label>
+        <input
+          type="text"
+          id="state_of_origin"
+          name="state_of_origin"
+          placeholder="Enter state of origin"
+          value="<%= typeof state_of_origin != 'undefined' ? stateOfOrigin : '' %>"
+          required
+        />
+      </div>
+      <div class="form-group col-sm-6 flex-column d-flex">
+        <label class="text-start">LGA</label>
+        <input
+          type="text"
+          id="lg"
+          name="lg"
+          placeholder="lg"
+          value="<%= typeof lg != 'undefined' ? lg : '' %>"
+          required
+        />
+      </div>
+    </div>
+
+    <!-- Residiential  -->
+    <!-- Resediential -->
+  
+    <div class="main-title mb_30 pt_30">
+        <h3 class="m-0">Residential Addres</h3>
+      </div>
+    
+
+    <!-- ROW 8 -->
+    <div class="row justify-content-between text-left">
+        <div class="form-group col-sm-6 flex-column d-flex">
+          <label class="text-start">Phone 1</label>
+          <input
+            type="text"
+            id="mobile_phone_1"
+            name="mobile_phone_1"
+            placeholder="Enter Phone 1"
+            value="<%= typeof mobile_phone_1 != 'undefined' ? mobile_phone_1 : '' %>"
+            required
+          />
+        </div>
+        <div class="form-group col-sm-6 flex-column d-flex">
+            <label class="text-start">Phone 2</label>
+            <input
+              type="text"
+              id="phone_2"
+              name="phone_2"
+              placeholder="Enter Phone 2"
+              value="<%= typeof phone_2 != 'undefined' ? phone_2 : '' %>"
+              required
+            />
+          </div>
+
+      </div>
+    <!-- ROW 9 -->
+    <div class="row justify-content-between text-left">
+      <div class="form-group col-12 flex-column d-flex">
+        <label class="text-start">Email Address</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter Email Address"
+          value="<%= typeof email != 'undefined' ? email : '' %>"
+          required
+        />
+      </div>
+    </div>
+    <!-- ROW 10 -->
+    <div class="row justify-content-between text-left">
+      <div class="form-group col-12 flex-column d-flex">
+        <label class="text-start"
+          >Disability</label
+        >
+        <input
+          type="text"
+          id="disability"
+          name="disability"
+          placeholder="Enter disability"
+          value="<%= typeof disability != 'undefined' ? disability : '' %>"
+          required
+        />
+      </div>
+    </div>
+
+    
+        <div class="main-title mb-25">
+            <h3 class="m-0">Part 2: ACCADEMIC INFORMATION</h3>
+          </div>
+
+    <!-- ROW 11 -->
+    <!-- last secondary school attended -->
+
+      <div class="row justify-content-between text-left">
+        <div class="form-group col-12 flex-column d-flex">
+          <label class="text-start"
+            >last secondary school attended</label
+          >
+          <input
+            type="text"
+            id="last_secondary_school_attended"
+            name="last_secondary_school_attended"
+            placeholder="last secondary school attended"
+           
+          />
+        </div>
+      </div>
+   
+      <!-- ROW 12 -->
+    <div class="row justify-content-between text-left">
+      <div class="form-group col-6 flex-column d-flex">
+        <label class="text-start">year of graduation</label>
+        <input
+          type="email"
+          id="fatherEmail"
+          name="year_of_graduation"
+          placeholder="year of graduation"
+       
+        />
+      </div>
+      <div class="form-group col-6 flex-column d-flex">
+        <label class="text-start">school location</label>
+        <input
+          type="text"
+          id="school_location"
+          name="school_location"
+          placeholder="school location"
+        />
+      </div>
+    </div>
+
+    <div class="main-title">
+        <h3 class="m-0">
+         Ordinary level result Applicant awaiting O' level should use "AR" as grade obtained
+        </h3>
+      </div>
+
+  
+
+    <!-- ROW 13 -->
+    <div class="row justify-content-between text-left">
+      <div class="form-group col-sm-4 flex-column d-flex">
+        <label class="text-start">Mother's Name</label>
+        <input
+          type="text"
+          id="motherName"
+          name="motherName"
+          placeholder="Enter Mother's Name"
+          value="<%= typeof motherName != 'undefined' ? motherName : '' %>"
+          required
+        />
+      </div>
+      <div class="form-group col-sm-4 flex-column d-flex">
+        <label class="text-start">Mother's Phone</label>
+        <input
+          type="text"
+          id="motherPhone"
+          name="motherPhone"
+          placeholder="Enter Mother's Phone"
+          value="<%= typeof motherPhone != 'undefined' ? motherPhone : '' %>"
+        />
+      </div>
+
+      <div class="form-group col-sm-4 flex-column d-flex">
+        <label class="text-start">Mother's Whatsapp</label>
+        <input
+          type="text"
+          id="motherWhatsapp"
+          name="motherWhatsapp"
+          placeholder="Enter Mother's Whatsapp"
+        />
+      </div>
+    </div>
+    <!-- ROW 14 -->
+    <div class="row justify-content-between text-left">
+      <div class="form-group col-6 flex-column d-flex">
+        <label class="text-start">Mother's Email</label>
+        <input
+          type="email"
+          id="motherEmail"
+          name="motherEmail"
+          placeholder="Enter Mother's Email"
+          value="<%= typeof motherEmail != 'undefined' ? motherEmail : '' %>"
+          required
+        />
+      </div>
+      <div class="form-group col-6 flex-column d-flex">
+        <label class="text-start">Mother's Profession</label>
+        <input
+          type="text"
+          id="motherProfession"
+          name="motherProfession"
+          placeholder="Enter Mother's Profession"
+          value="<%= typeof motherProfession != 'undefined' ? motherProfession : '' %>"
+          required
+        />
+      </div>
+    </div>
+    <!-- ROW 15 -->
+    <div class="row justify-content-between text-left">
+      <div class="form-group col-12 flex-column d-flex">
+        <label class="text-start">
+          Mother's Office Address</label
+        >
+        <input
+          type="text"
+          id="motherOfficeAddress"
+          name="motherOfficeAddress"
+          placeholder="Enter Mother's Office Address"
+          value="<%= typeof motherOfficeAddress != 'undefined' ? motherOfficeAddress : '' %>"
+          required
+        />
+      </div>
+    </div>
+    <!-- ROW 15 -->
+    <div class="row justify-content-between text-left">
+      <div class="form-group col-12 flex-column d-flex">
+        <label class="text-start">Please add a photo</label>
+        <input
+          type="text"
+          id="passportPhoto"
+          name="passportPhoto"
+          placeholder="passportPhoto"
+          value="<%= typeof passportPhoto != 'undefined' ? passportPhoto: '' %>"
+          required
+        />
+      </div>
+    </div>
+
+    <div class="cs_check_box">
+      <input
+        type="checkbox"
+        id="check_box"
+        class="common_checkbox"
+      />
+      <label class="form-label" for="check_box">
+        Keep me up to date
+      </label>
+    </div>
+    <button class="btn_1 full_width text-center">
+      Sign Up
+    </button>
+    <p>
+      Need an account?
+      <a
+        data-bs-toggle="modal"
+        data-bs-target="#sing_up"
+        data-bs-dismiss="modal"
+        href="/login"
+        >Log in</a
+      >
+    </p>
+    <div class="text-center">
+      <a
+        href="/login"
+        data-bs-toggle="modal"
+        data-bs-target="#forgot_password"
+        data-bs-dismiss="modal"
+        class="pass_forget_btn"
+        >Forget Password?</a
+      >
+    </div>
+  </form>

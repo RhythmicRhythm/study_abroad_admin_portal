@@ -1,0 +1,341 @@
+<body class="crm_body_bg">
+    <header>
+      <nav
+        class="sidebar vertical-scroll dark_sidebar ps-container ps-theme-default"
+        data-ps-id="3a9488de-b32d-3ede-41b2-6f8e5c02ca04"
+      >
+        <ul id="sidebar_menu" class="metismenu">
+          <li class="">
+            <a href="/dashboard" aria-expanded="false" class="active">
+              <div class="icon_menu">
+                <img src="/dashboard/assets/img/menu-icon/dashboard.svg" alt="" />
+              </div>
+              <span>Dashboard</span>
+            </a>
+          </li>
+        </ul>
+        <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 3px">
+          <div
+            class="ps-scrollbar-x"
+            tabindex="0"
+            style="left: 0px; width: 0px"
+          ></div>
+        </div>
+        <div class="ps-scrollbar-y-rail" style="top: 0px; right: 3px">
+          <div
+            class="ps-scrollbar-y"
+            tabindex="0"
+            style="top: 0px; height: 0px"
+          ></div>
+        </div>
+      </nav>
+    </header>
+  
+    <section class="main_content dashboard_part large_header_bg">
+      <div class="container-fluid g-0">
+        <div class="row">
+          <div class="col-lg-12 p-0">
+            <div
+              class="header_iner d-flex justify-content-between align-items-center"
+            >
+              <div class="sidebar_icon d-lg-none">
+                <i class="ti-menu"></i>
+              </div>
+              <div class="serach_field-area d-flex align-items-center">
+                <div class="search_inner">
+                  <form action="index.html#">
+                    <div class="search_field">
+                      <input type="text" placeholder="Search here..." />
+                    </div>
+                    <button type="submit">
+                      <img src="img/icon/icon_search.svg" alt="" />
+                    </button>
+                  </form>
+                </div>
+                <span class="f_s_14 f_w_400 ml_25 white_text text_white"
+                  >Apps</span
+                >
+              </div>
+              <div
+                class="header_right d-flex justify-content-between align-items-center"
+              >
+                <div class="profile_info">
+                  <img src="img/client_img.png" alt="#" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="main_content_iner overly_inner">
+        <div class="container-fluid p-0 sm_padding_15px">
+          <div class="row">
+            <div class="col-12">
+              <div
+                class="page_title_box d-flex align-items-center justify-content-between"
+              >
+                <div class="page_title_left">
+                  <h3 class="f_s_30 f_w_700 text_white">
+                    Study Abroad Application
+                  </h3>
+                  <ol class="breadcrumb page_bradcam mb-0">
+                    <li class="breadcrumb-item">Application</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="row">
+            <div class="col-lg-8 mx-auto p-0 m-0">
+              <div class="white_card card_height_100 mb_30">
+                <div class="white_card_header">
+                  <div class="box_header m-0">
+                    <div class="main-title">
+                      <h3 class="m-0">
+                        Please fill in these information carefully
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="white_card_body">
+                  <div class="">
+                    <form onsubmit="showLoader()" action="/form4b" method="post">
+                      <div style="margin-bottom: 30px">
+                        <h3
+                          style="
+                            color: #03374c;
+                            font-size: 16px;
+                            text-transform: uppercase;
+                            font: 900;
+                          "
+                        >g
+                          Tertiary Education Summary
+                        </h3>
+                      </div>
+  
+                      <div class=""> 
+                       
+    
+                        <!-- efirst last middle-->
+                        <div class="row mb-3">
+                          <div class="col-md-6">
+                            <label class="form-label" for="inputEmail4"
+                              >Name of other tertiary/professional institution
+                              
+                            </label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              name="tss_school_other"
+                              placeholder="Your Answer"
+                            />
+                          </div>
+                          <div class="col-md-6">
+                            <label class="form-label" for="inputEmail4"
+                              >Country of other tertiary/professional institution
+                            </label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              name="tss_country_other"
+                              placeholder="Your Answer"
+                            />
+                          </div>
+                        </div>
+                        <!-- address email-->
+                        <div class="row mb-3">
+                          <div class="col-md-12">
+                            <label class="form-label" for="inputEmail4"
+                              >Address of other tertiary/professional institution
+                              attended
+                            </label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              name="tss_address_other"
+                              placeholder="Your Answer"
+                            />
+                          </div>
+                        </div>
+                        <!-- address email-->
+                        <div class="row mb-3">
+                          <div class="col-md-4">
+                            <label class="form-label" for="inputEmail4">
+                              Started/attended tertiary/professional institution
+                              from
+                            </label>
+                            <input
+                              type="date"
+                              class="form-control"
+                              name="tss_date_start_other"
+                              placeholder="Phone Number"
+                            />
+                          </div>
+                          <div class="col-md-4">
+                            <label class="form-label" for="inputEmail4">
+                              Left/graduated from other tertiary/professional
+                              institution on
+                            </label>
+                            <input
+                              type="date"
+                              class="form-control"
+                              name="tss_date_end_other"
+                              placeholder="Relationship Status"
+                            />
+                          </div>
+                          <div class="col-md-4">
+                            <label class="form-label" for="inputEmail4">
+                              Degree/certification awarded at other tertiary/professional
+                              institution
+                            </label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              name="tss_certificate_other"
+                              placeholder="Your answer"
+                            />
+                          </div>
+                        </div>
+    
+                        <div class="row mb-3">
+                          <div class="col-md-6">
+                            <label class="form-label" for="inputEmail4">
+                              Date of degree/certification awarded
+                            </label>
+                            <input
+                              type="date"
+                              class="form-control"
+                              name="tss_date_c_other"
+                              placeholder="Phone Number"
+                            />
+                          </div>
+                          <div class="col-md-6">
+                            <label class="form-label" for="inputEmail4">
+                              Grade of Award
+                            </label>
+                            <select
+                              class="form-select"
+                              name="tss_grade_award_other"
+                            >
+                              <option value="">select</option>
+                              <option value="Other">Other</option>
+                              <option value="E">E</option>
+                              <option value="D">D</option>
+                              <option value="B/BC">B/BC</option>
+                              <option value="A/A+">A/A+</option>
+                              <option value="MPhil">MPhil</option>
+                              <option value="Merit">Merit</option>
+                              <option value="F">F</option>
+                              <option value="Second class/Upper credit">
+                                Second class/Upper credit
+                              </option>
+                              <option value="Second class/Lower credit">
+                                Second class/Lower credit
+                              </option>
+                              <option value="AB/B">AB/B</option>
+                              <option value="First Class/ Distiction">
+                                First Class/ Distiction
+                              </option>
+                            </select>
+                          </div>
+                        </div>
+    
+                        <div class="row mb-3">
+                          <div class="col-md-12">
+                            <label class="form-label" for="inputEmail4">
+                              If you chose "other" above, please, state the grade
+                              below, if not, skip to next
+                            </label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              name="tss_other_other"
+                              placeholder="Your Answer"
+                            />
+                          </div>
+                        </div>
+                      </div>
+  
+                      <input
+                        type="hidden"
+                        name="help"
+                        value=" <%= applicationId %>"
+                      />
+  
+                      <button type="submit" class="btn btn-primary">
+                        Continue
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="footer_part">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="footer_iner text-center">
+                <p>
+                  ©
+                  <script>
+                    document.write(new Date().getFullYear());
+                  </script>
+                  2023 - Designed by
+                  <a href="https://edu-central.org">eduCENTRAL</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div
+      style="
+        background: rgba(7, 7, 7, 0.267);
+        padding: 50px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        z-index: 1000;
+        width: 120vw;
+        height: 100vh;
+        transform: translate(-50%, -50%);
+        display: none;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      "
+      class="loader row justify-content-center"
+    >
+      <div class="loader--facebook colord_bg_1 mb_30">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="loader--facebook colord_bg_1 mb_30">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="loader--facebook colord_bg_1 mb_30">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  
+    <script>
+      function showLoader() {
+        console.log("hello");
+        document.querySelector(".loader").style.display = "flex";
+        document.querySelector("button[type=submit]").disabled = true;
+      }
+    </script>
+  </body>
+  

@@ -1,0 +1,261 @@
+study_country
+program_of_study
+course_of_study
+paid_fee
+fee_price
+fee_date
+fee_name
+
+
+
+
+firstname
+lastname
+middlename
+dob
+first_language
+country_of_citizenship
+i_p_id
+i_p_issue_date
+i_p_expiry_date
+i_p_issue_auth
+gender
+marital_status
+state
+address
+email
+phone
+academic_c
+date_h_e_a
+class_award
+cgpa
+e_firstname
+e_lastname
+e_middlename
+e_email
+e_address
+e_phone
+e_relationship
+
+
+englist_test
+english_score
+english_date
+other_language
+other_language_score
+other_language_date
+other_exam
+other_exam_score
+other_exam_date
+
+es_school
+es_country
+es_address
+es_date_start
+es_date_end
+es_certificate
+es_date_c
+es_grade_award
+es_other
+
+es_school_other
+es_country_other
+es_address_other
+es_date_start_other
+es_date_end_other
+es_certificate_other
+es_date_c_other
+es_grade_award_other
+es_other_other
+
+
+ts_school
+ts_country
+ts_address
+ts_date_start
+ts_date_end
+ts_certificate
+ts_date_c
+ts_grade_award
+ts_other
+
+ts_school_other
+ts_country_other
+ts_address_other
+ts_date_start_other
+ts_date_end_other
+ts_certificate_other
+ts_date_c_other
+ts_grade_award_other
+ts_other_other
+
+tss_school_other
+tss_country_other
+tss_address_other
+tss_date_start_other
+tss_date_end_other
+tss_certificate_other
+tss_date_c_other
+tss_grade_award_other
+tss_other_other
+
+deported
+deported_reason
+
+r_fullname_1
+r_email_1
+r_phone_1
+r_employer_1
+r_address_1
+r_rank_1
+
+r_fullname_2
+r_email_2
+r_phone_2
+r_employer_2
+r_address_2
+r_rank_2
+
+r_fullname_3
+r_email_3
+r_phone_3
+r_employer_3
+r_address_3
+r_rank_3
+
+
+cv_resume
+passport
+international_passport
+secondary_certificate
+undergraduate_certificate
+graduate_certificate
+
+post_certificate
+professional_certificate
+personal_statement
+
+
+
+// Uploading cv_resume
+if (cv_resume) {
+  const resultCvResume = await cloudinary.uploader.upload(
+    cv_resume.tempFilePath,
+    {
+      public_id: `${Date.now()}_cv_resume`,
+      transformation: [
+        { width: 1080, height: 1080, quality: 80, crop: "fill" },
+      ],
+    }
+  );
+
+  application.cv_resume = resultCvResume.secure_url;
+  console.log(resultCvResume.secure_url);
+}
+
+// Uploading passport
+if (passport) {
+  const resultPassport = await cloudinary.uploader.upload(
+    passport.tempFilePath,
+    {
+      public_id: `${Date.now()}_passport`,
+      transformation: [
+        { width: 1080, height: 1080, quality: 80, crop: "fill" },
+      ],
+    }
+  );
+
+  application.passport = resultPassport.secure_url;
+  console.log(resultPassport.secure_url);
+}
+
+// Uploading international_passport
+if (international_passport) {
+  const resultInternationalPassport = await cloudinary.uploader.upload(
+    international_passport.tempFilePath,
+    {
+      public_id: `${Date.now()}_international_passport`,
+      transformation: [
+        { width: 1080, height: 1080, quality: 80, crop: "fill" },
+      ],
+    }
+  );
+
+  application.international_passport = resultInternationalPassport.secure_url;
+  console.log(resultInternationalPassport.secure_url);
+}
+
+// Repeat the pattern for the remaining fields...
+
+// Uploading secondary_certificate
+if (secondary_certificate) {
+  const resultSecondaryCertificate = await cloudinary.uploader.upload(
+    secondary_certificate.tempFilePath,
+    {
+      public_id: `${Date.now()}_secondary_certificate`,
+      transformation: [
+        { width: 1080, height: 1080, quality: 80, crop: "fill" },
+      ],
+    }
+  );
+
+  application.secondary_certificate = resultSecondaryCertificate.secure_url;
+  console.log(resultSecondaryCertificate.secure_url);
+}
+
+// Uploading undergraduate_certificate
+if (undergraduate_certificate) {
+  const resultUndergraduateCertificate = await cloudinary.uploader.upload(
+    undergraduate_certificate.tempFilePath,
+    {
+      public_id: `${Date.now()}_undergraduate_certificate`,
+      transformation: [
+        { width: 1080, height: 1080, quality: 80, crop: "fill" },
+      ],
+    }
+  );
+
+  application.undergraduate_certificate = resultUndergraduateCertificate.secure_url;
+  console.log(resultUndergraduateCertificate.secure_url);
+}
+
+// Repeat the pattern for the remaining fields...
+// Uploading graduate_certificate
+// Uploading post_certificate
+// Uploading professional_certificate
+// Uploading personal_statement
+
+
+<!-- applicationdetails.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- your head content here -->
+</head>
+
+<body>
+  <h1>User Applications</h1>
+
+  <% if (userApplications.length > 0) { %>
+    <ul>
+      <% userApplications.forEach(application => { %>
+        <% if (application.completed_application) { %>
+          <li>
+            <!-- Display application details as needed -->
+            Application ID: <%= application._id %><br>
+            <!-- Add other application details you want to display -->
+          </li>
+        <% } %>
+      <% }); %>
+    </ul>
+  <% } else { %>
+    <p>No completed applications found.</p>
+  <% } %>
+
+  <!-- your other content here -->
+
+</body>
+
+</html>

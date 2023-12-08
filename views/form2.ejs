@@ -1,0 +1,346 @@
+<body class="crm_body_bg">
+  <header>
+    <nav
+      class="sidebar vertical-scroll dark_sidebar ps-container ps-theme-default"
+      data-ps-id="3a9488de-b32d-3ede-41b2-6f8e5c02ca04"
+    >
+      <ul id="sidebar_menu" class="metismenu">
+        <li class="">
+          <a href="/dashboard" aria-expanded="false" class="active">
+            <div class="icon_menu">
+              <img src="/dashboard/assets/img/menu-icon/dashboard.svg" alt="" />
+            </div>
+            <span>Dashboard</span>
+          </a>
+        </li>
+      </ul>
+      <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 3px">
+        <div
+          class="ps-scrollbar-x"
+          tabindex="0"
+          style="left: 0px; width: 0px"
+        ></div>
+      </div>
+      <div class="ps-scrollbar-y-rail" style="top: 0px; right: 3px">
+        <div
+          class="ps-scrollbar-y"
+          tabindex="0"
+          style="top: 0px; height: 0px"
+        ></div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="main_content dashboard_part large_header_bg">
+    <div class="container-fluid g-0">
+      <div class="row">
+        <div class="col-lg-12 p-0">
+          <div
+            class="header_iner d-flex justify-content-between align-items-center"
+          >
+            <div class="sidebar_icon d-lg-none">
+              <i class="ti-menu"></i>
+            </div>
+            <div class="serach_field-area d-flex align-items-center">
+              <div class="search_inner">
+                <form action="index.html#">
+                  <div class="search_field">
+                    <input type="text" placeholder="Search here..." />
+                  </div>
+                  <button type="submit">
+                    <img src="img/icon/icon_search.svg" alt="" />
+                  </button>
+                </form>
+              </div>
+              <span class="f_s_14 f_w_400 ml_25 white_text text_white"
+                >Apps</span
+              >
+            </div>
+            <div
+              class="header_right d-flex justify-content-between align-items-center"
+            >
+              <div class="profile_info">
+                <img src="img/client_img.png" alt="#" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main_content_iner overly_inner">
+      <div class="container-fluid p-0 sm_padding_15px">
+        <div class="row">
+          <div class="col-12">
+            <div
+              class="page_title_box d-flex align-items-center justify-content-between"
+            >
+              <div class="page_title_left">
+                <h3 class="f_s_30 f_w_700 text_white">
+                  Study Abroad Application
+                </h3>
+                <ol class="breadcrumb page_bradcam mb-0">
+                  <li class="breadcrumb-item">Application</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-8 mx-auto p-0 m-0">
+            <div class="white_card card_height_100 mb_30">
+              <div class="white_card_header">
+                <div class="box_header m-0">
+                  <div class="main-title">
+                    <h3 class="m-0">
+                      Please fill in these information carefully
+                    </h3>
+                  </div>
+                </div>
+              </div>
+              <div class="white_card_body">
+                <div class="">
+                  <form onsubmit="showLoader()" action="/form2" method="post">
+                    <%- include ("./partials/messages"); %>
+                    <div style="margin-bottom: 20px">
+                      <h3
+                        style="
+                          color: #03374c;
+                          font-size: 16px;
+                          text-transform: uppercase;
+                          font: 900;
+                        "
+                      >
+                        personal details 
+                      </h3>
+                    </div>
+
+                    <!-- FIRSTNAME AND ADDRESS -->
+                  
+                    <!-- MIDDLENAME & DOB  -->
+                    
+
+                    <!-- LANG & COUNTRY  -->
+                    <div class="row mb-3">
+                      <div class="col-md-6">
+                        <label class="form-label" for="inputEmail4"
+                          >first language</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="first_language"
+                          placeholder="First Language"
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label" for="inputPassword4"
+                          >Country of citizenship</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="country_of_citizenship"
+                          placeholder="Your Answer"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="row mb-3">
+                      
+                      <div class="col-md-6">
+                        <label class="form-label" for="inputPassword4"
+                          >Date Of Birth</label
+                        >
+                        <input
+                          type="date"
+                          class="form-control"
+                          name="dob"
+                          required
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label" for="inputEmail4"
+                          >Gender</label
+                        >
+                        <select class="form-select" name="gender" required>
+                          <option value="" selected="selected">
+                            - Select -
+                          </option>
+                          <option value="Male">Male</option>
+                          <option value="Female">Female</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <!-- GENDER MARITAL STATE -->
+                    <div class="row mb-3">
+                    
+                      <div class="col-md-6">
+                        <label class="form-label" for="inputPassword4"
+                          >Marital Status</label
+                        >
+                        <select
+                          class="form-select"
+                          name="marital_status"
+                          required
+                        >
+                        <option value="" selected="selected">
+                          - Select -
+                        </option>
+                          <option value="Single">Single</option>
+                          <option value="Married">Married</option>
+                        </select>
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label" for="inputPassword4"
+                          >State Of Residence
+                        </label>
+                        <select class="form-select" name="state" required>
+
+                          <option value="" selected="selected">
+                            - Select -
+                          </option>
+                          <option value="Abia">Abia</option>
+                          <option value="Adamawa">Adamawa</option>
+                          <option value="AkwaIbom">AkwaIbom</option>
+                          <option value="Anambra">Anambra</option>
+                          <option value="Bauchi">Bauchi</option>
+                          <option value="Bayelsa">Bayelsa</option>
+                          <option value="Benue">Benue</option>
+                          <option value="Borno">Borno</option>
+                          <option value="Cross River">
+                            Cross River
+                          </option>
+                          <option value="Delta">Delta</option>
+                          <option value="Ebonyi">Ebonyi</option>
+                          <option value="Edo">Edo</option>
+                          <option value="Ekiti">Ekiti</option>
+                          <option value="Enugu">Enugu</option>
+                          <option value="FCT">FCT</option>
+                          <option value="Gombe">Gombe</option>
+                          <option value="Imo">Imo</option>
+                          <option value="Jigawa">Jigawa</option>
+                          <option value="Kaduna">Kaduna</option>
+                          <option value="Kano">Kano</option>
+                          <option value="Katsina">Katsina</option>
+                          <option value="Kebbi">Kebbi</option>
+                          <option value="Kogi">Kogi</option>
+                          <option value="Kwara">Kwara</option>
+                          <option value="Lagos">Lagos</option>
+                          <option value="Nasarawa">Nasarawa</option>
+                          <option value="Niger">Niger</option>
+                          <option value="Ogun">Ogun</option>
+                          <option value="Ondo">Ondo</option>
+                          <option value="Osun">Osun</option>
+                          <option value="Oyo">Oyo</option>
+                          <option value="Plateau">Plateau</option>
+                          <option value="Rivers">Rivers</option>
+                          <option value="Sokoto">Sokoto</option>
+                          <option value="Taraba">Taraba</option>
+                          <option value="Yobe">Yobe</option>
+                          <option value="Zamfara">Zamafara</option>
+
+                        </select>
+                      </div>
+                    </div>
+                  
+                    <!-- email phone academic_c-->
+             
+                      <!-- Residential-->
+                      <div class="row mb-3">
+                        <div class="col-md-12">
+                          <label class="form-label" for="inputEmail4"
+                            >Residential/Mailing address</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            name="address"
+                            placeholder="Your Answer"
+                            required
+                          />
+                        </div>
+                      </div>
+                  
+
+                    <input
+                      type="hidden"
+                      name="help"
+                      value=" <%= applicationId %>"
+                    />
+
+                    <button type="submit" class="btn btn-primary">
+                       Continue
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer_part">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="footer_iner text-center">
+              <p>
+                ©
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                2023 - Designed by
+                <a href="https://edu-central.org">eduCENTRAL</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div
+    style="
+      background: rgba(7, 7, 7, 0.267);
+      padding: 50px;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      z-index: 1000;
+      width: 120vw;
+      height: 100vh;
+      transform: translate(-50%, -50%);
+      display: none;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    "
+    class="loader row justify-content-center"
+  >
+    <div class="loader--facebook colord_bg_1 mb_30">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="loader--facebook colord_bg_1 mb_30">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="loader--facebook colord_bg_1 mb_30">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <script>
+    function showLoader() {
+      console.log("hello");
+      document.querySelector(".loader").style.display = "flex";
+      document.querySelector("button[type=submit]").disabled = true;
+    }
+  </script>
+</body>

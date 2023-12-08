@@ -1,0 +1,297 @@
+<body class="crm_body_bg">
+    <header>
+      <nav
+        class="sidebar vertical-scroll dark_sidebar ps-container ps-theme-default"
+        data-ps-id="3a9488de-b32d-3ede-41b2-6f8e5c02ca04"
+      >
+        <ul id="sidebar_menu" class="metismenu">
+          <li class="">
+            <a href="/dashboard" aria-expanded="false" class="active">
+              <div class="icon_menu">
+                <img src="/dashboard/assets/img/menu-icon/dashboard.svg" alt="" />
+              </div>
+              <span>Dashboard</span>
+            </a>
+          </li>
+        </ul>
+        <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 3px">
+          <div
+            class="ps-scrollbar-x"
+            tabindex="0"
+            style="left: 0px; width: 0px"
+          ></div>
+        </div>
+        <div class="ps-scrollbar-y-rail" style="top: 0px; right: 3px">
+          <div
+            class="ps-scrollbar-y"
+            tabindex="0"
+            style="top: 0px; height: 0px"
+          ></div>
+        </div>
+      </nav>
+    </header>
+  
+    <section class="main_content dashboard_part large_header_bg">
+      <div class="container-fluid g-0">
+        <div class="row">
+          <div class="col-lg-12 p-0">
+            <div
+              class="header_iner d-flex justify-content-between align-items-center"
+            >
+              <div class="sidebar_icon d-lg-none">
+                <i class="ti-menu"></i>
+              </div>
+              <div class="serach_field-area d-flex align-items-center">
+                <div class="search_inner">
+                  <form action="index.html#">
+                    <div class="search_field">
+                      <input type="text" placeholder="Search here..." />
+                    </div>
+                    <button type="submit">
+                      <img src="img/icon/icon_search.svg" alt="" />
+                    </button>
+                  </form>
+                </div>
+                <span class="f_s_14 f_w_400 ml_25 white_text text_white"
+                  >Apps</span
+                >
+              </div>
+              <div
+                class="header_right d-flex justify-content-between align-items-center"
+              >
+                <div class="profile_info">
+                  <img src="img/client_img.png" alt="#" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="main_content_iner overly_inner">
+        <div class="container-fluid p-0 sm_padding_15px">
+          <div class="row">
+            <div class="col-12">
+              <div
+                class="page_title_box d-flex align-items-center justify-content-between"
+              >
+                <div class="page_title_left">
+                  <h3 class="f_s_30 f_w_700 text_white">
+                    Study Abroad Application
+                  </h3>
+                  <ol class="breadcrumb page_bradcam mb-0">
+                    <li class="breadcrumb-item">Application</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="row">
+            <div class="col-lg-8 mx-auto p-0 m-0">
+              <div class="white_card card_height_100 mb_30">
+                <div class="white_card_header">
+                  <div class="box_header m-0">
+                    
+                  </div>
+                </div>
+                <div class="white_card_body">
+                  <div class="">
+                    <form onsubmit="showLoader()" action="/form2b" method="post">
+                      <%- include ("./partials/messages"); %>
+              
+  
+                         
+                    <div class="">
+                        <div style="margin-bottom: 30px">
+                          <h3
+                            style="
+                              color: #03374c;
+                              font-size: 16px;
+                              text-transform: uppercase;
+                              font: 900;
+                            "
+                          >
+                            Emergency Contact
+                          </h3>
+                          <p>
+                            Please provide details of anyone you would like us to
+                            contact in case of emergency
+                          </p>
+                        </div>
+  
+                        <!-- efirst last middle-->
+                        <div class="row mb-3">
+                          <div class="col-md-4">
+                            <label class="form-label" for="inputEmail4"
+                              >Firstname</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control"
+                              name="e_firstname"
+                              placeholder="Firstname"
+                              required
+                            />
+                          </div>
+                          <div class="col-md-4">
+                            <label class="form-label" for="inputEmail4"
+                              >lastname</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control"
+                              name="e_lastname"
+                              placeholder="Lastname"
+                              required
+                            />
+                          </div>
+                          <div class="col-md-4">
+                            <label class="form-label" for="inputEmail4"
+                              >Middlename
+                            </label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              name="e_middlename"
+                              placeholder="Middlename"
+                              required
+                            />
+                          </div>
+                        </div>
+                        <!-- address email-->
+                        <div class="row mb-3">
+                          <div class="col-md-6">
+                            <label class="form-label" for="inputEmail4"
+                              >Email of emergency contact</label
+                            >
+                            <input
+                              type="email"
+                              class="form-control"
+                              name="e_email"
+                              placeholder="Email Address"
+                              required
+                            />
+                          </div>
+                          <div class="col-md-6">
+                            <label class="form-label" for="inputEmail4">
+                              Address of emergency contact
+                            </label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              name="e_address"
+                              placeholder="Address"
+                              required
+                            />
+                          </div>
+                        </div>
+                        <!-- address email-->
+                        <div class="row mb-3">
+                          <div class="col-md-6">
+                            <label class="form-label" for="inputEmail4"
+                              >Phone number of emergency contact
+                            </label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              name="e_phone"
+                              placeholder="Phone Number"
+                              required
+                            />
+                          </div>
+                          <div class="col-md-6">
+                            <label class="form-label" for="inputEmail4">
+                              Relationship with the emergency contact
+                            </label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              name="e_relationship"
+                              placeholder="Relationship Status"
+                              required
+                            />
+                          </div>
+                        </div>
+                      </div>
+  
+                      <input
+                        type="hidden"
+                        name="help"
+                        value=" <%= applicationId %>"
+                      />
+  
+                      <button type="submit" class="btn btn-primary">
+                        Submit
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="footer_part">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="footer_iner text-center">
+                <p>
+                  ©
+                  <script>
+                    document.write(new Date().getFullYear());
+                  </script>
+                  2023 - Designed by
+                  <a href="https://edu-central.org">eduCENTRAL</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div
+      style="
+        background: rgba(7, 7, 7, 0.267);
+        padding: 50px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        z-index: 1000;
+        width: 120vw;
+        height: 100vh;
+        transform: translate(-50%, -50%);
+        display: none;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      "
+      class="loader row justify-content-center"
+    >
+      <div class="loader--facebook colord_bg_1 mb_30">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="loader--facebook colord_bg_1 mb_30">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="loader--facebook colord_bg_1 mb_30">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <script>
+      function showLoader() {
+        console.log("hello");
+        document.querySelector(".loader").style.display = "flex";
+        document.querySelector("button[type=submit]").disabled = true;
+      }
+    </script>
+  </body>
+  

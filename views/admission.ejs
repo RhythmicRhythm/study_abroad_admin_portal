@@ -1,0 +1,1436 @@
+<html lang="zxx">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Lagooz School:: Official Website</title>
+    <meta name="description" content="Lagooz School Official Website" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="/assets/img/favicon.png"
+    />
+    <link rel="stylesheet" href="/dashboard/assets/css/bootstrap1.min.css" />
+    <link
+      rel="stylesheet"
+      href="/dashboard/assets/vendors/themefy_icon/themify-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/dashboard/assets/vendors/niceselect/css/nice-select.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/dashboard/assets/vendors/owl_carousel/css/owl.carousel.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/dashboard/assets/vendors/gijgo/gijgo.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/dashboard/assets/vendors/font_awesome/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/dashboard/assets/vendors/tagsinput/tagsinput.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/dashboard/assets/vendors/datepicker/date-picker.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/dashboard/assets/vendors/vectormap-home/vectormap-2.0.2.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/dashboard/assets/vendors/scroll/scrollable.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/dashboard/assets/vendors/datatable/css/jquery.dataTables.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/dashboard/assets/vendors/datatable/css/responsive.dataTables.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/dashboard/assets/vendors/datatable/css/buttons.dataTables.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/dashboard/assets/vendors/text_editor/summernote-bs4.css"
+    />
+    <link rel="stylesheet" href="/dashboard/assets/vendors/morris/morris.css" />
+    <link
+      rel="stylesheet"
+      href="/dashboard/assets/vendors/material_icon/material-icons.css"
+    />
+    <link rel="stylesheet" href="/dashboard/assets/css/metisMenu.css" />
+    <link rel="stylesheet" href="/dashboard/assets/css/style1.css" />
+    <link rel="stylesheet" href="/dashboard/assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="/dashboard/assets/css/colors/default.css"
+      id="colorSkinCSS"
+    />
+    <style type="text/css">
+      .apexcharts-canvas {
+        position: relative;
+        user-select: none;
+        /* cannot give overflow: hidden as it will crop tooltips which overflow outside chart area */
+      }
+
+      /* scrollbar is not visible by default for legend, hence forcing the visibility */
+      .apexcharts-canvas ::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 6px;
+      }
+
+      .apexcharts-canvas ::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background-color: rgba(0, 0, 0, 0.5);
+        box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+        -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+      }
+
+      .apexcharts-canvas.dark {
+        background: #343f57;
+      }
+
+      .apexcharts-inner {
+        position: relative;
+      }
+
+      .legend-mouseover-inactive {
+        transition: 0.15s ease all;
+        opacity: 0.2;
+      }
+
+      .apexcharts-series-collapsed {
+        opacity: 0;
+      }
+
+      .apexcharts-gridline,
+      .apexcharts-text {
+        pointer-events: none;
+      }
+
+      .apexcharts-tooltip {
+        border-radius: 5px;
+        box-shadow: 2px 2px 6px -4px #999;
+        cursor: default;
+        font-size: 14px;
+        left: 62px;
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+        top: 20px;
+        overflow: hidden;
+        white-space: nowrap;
+        z-index: 12;
+        transition: 0.15s ease all;
+      }
+
+      .apexcharts-tooltip.light {
+        border: 1px solid #e3e3e3;
+        background: rgba(255, 255, 255, 0.96);
+      }
+
+      .apexcharts-tooltip.dark {
+        color: #fff;
+        background: rgba(30, 30, 30, 0.8);
+      }
+
+      .apexcharts-tooltip * {
+        font-family: inherit;
+      }
+
+      .apexcharts-tooltip .apexcharts-marker,
+      .apexcharts-area-series .apexcharts-area,
+      .apexcharts-line {
+        pointer-events: none;
+      }
+
+      .apexcharts-tooltip.active {
+        opacity: 1;
+        transition: 0.15s ease all;
+      }
+
+      .apexcharts-tooltip-title {
+        padding: 6px;
+        font-size: 15px;
+        margin-bottom: 4px;
+      }
+
+      .apexcharts-tooltip.light .apexcharts-tooltip-title {
+        background: #eceff1;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .apexcharts-tooltip.dark .apexcharts-tooltip-title {
+        background: rgba(0, 0, 0, 0.7);
+        border-bottom: 1px solid #333;
+      }
+
+      .apexcharts-tooltip-text-value,
+      .apexcharts-tooltip-text-z-value {
+        display: inline-block;
+        font-weight: 600;
+        margin-left: 5px;
+      }
+
+      .apexcharts-tooltip-text-z-label:empty,
+      .apexcharts-tooltip-text-z-value:empty {
+        display: none;
+      }
+
+      .apexcharts-tooltip-text-value,
+      .apexcharts-tooltip-text-z-value {
+        font-weight: 600;
+      }
+
+      .apexcharts-tooltip-marker {
+        width: 12px;
+        height: 12px;
+        position: relative;
+        top: 0px;
+        margin-right: 10px;
+        border-radius: 50%;
+      }
+
+      .apexcharts-tooltip-series-group {
+        padding: 0 10px;
+        display: none;
+        text-align: left;
+        justify-content: left;
+        align-items: center;
+      }
+
+      .apexcharts-tooltip-series-group.active .apexcharts-tooltip-marker {
+        opacity: 1;
+      }
+
+      .apexcharts-tooltip-series-group.active,
+      .apexcharts-tooltip-series-group:last-child {
+        padding-bottom: 4px;
+      }
+
+      .apexcharts-tooltip-series-group-hidden {
+        opacity: 0;
+        height: 0;
+        line-height: 0;
+        padding: 0 !important;
+      }
+
+      .apexcharts-tooltip-y-group {
+        padding: 6px 0 5px;
+      }
+
+      .apexcharts-tooltip-candlestick {
+        padding: 4px 8px;
+      }
+
+      .apexcharts-tooltip-candlestick > div {
+        margin: 4px 0;
+      }
+
+      .apexcharts-tooltip-candlestick span.value {
+        font-weight: bold;
+      }
+
+      .apexcharts-tooltip-rangebar {
+        padding: 5px 8px;
+      }
+
+      .apexcharts-tooltip-rangebar .category {
+        font-weight: 600;
+        color: #777;
+      }
+
+      .apexcharts-tooltip-rangebar .series-name {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      .apexcharts-xaxistooltip {
+        opacity: 0;
+        padding: 9px 10px;
+        pointer-events: none;
+        color: #373d3f;
+        font-size: 13px;
+        text-align: center;
+        border-radius: 2px;
+        position: absolute;
+        z-index: 10;
+        background: #eceff1;
+        border: 1px solid #90a4ae;
+        transition: 0.15s ease all;
+      }
+
+      .apexcharts-xaxistooltip.dark {
+        background: rgba(0, 0, 0, 0.7);
+        border: 1px solid rgba(0, 0, 0, 0.5);
+        color: #fff;
+      }
+
+      .apexcharts-xaxistooltip:after,
+      .apexcharts-xaxistooltip:before {
+        left: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+      }
+
+      .apexcharts-xaxistooltip:after {
+        border-color: rgba(236, 239, 241, 0);
+        border-width: 6px;
+        margin-left: -6px;
+      }
+
+      .apexcharts-xaxistooltip:before {
+        border-color: rgba(144, 164, 174, 0);
+        border-width: 7px;
+        margin-left: -7px;
+      }
+
+      .apexcharts-xaxistooltip-bottom:after,
+      .apexcharts-xaxistooltip-bottom:before {
+        bottom: 100%;
+      }
+
+      .apexcharts-xaxistooltip-top:after,
+      .apexcharts-xaxistooltip-top:before {
+        top: 100%;
+      }
+
+      .apexcharts-xaxistooltip-bottom:after {
+        border-bottom-color: #eceff1;
+      }
+
+      .apexcharts-xaxistooltip-bottom:before {
+        border-bottom-color: #90a4ae;
+      }
+
+      .apexcharts-xaxistooltip-bottom.dark:after {
+        border-bottom-color: rgba(0, 0, 0, 0.5);
+      }
+
+      .apexcharts-xaxistooltip-bottom.dark:before {
+        border-bottom-color: rgba(0, 0, 0, 0.5);
+      }
+
+      .apexcharts-xaxistooltip-top:after {
+        border-top-color: #eceff1;
+      }
+
+      .apexcharts-xaxistooltip-top:before {
+        border-top-color: #90a4ae;
+      }
+
+      .apexcharts-xaxistooltip-top.dark:after {
+        border-top-color: rgba(0, 0, 0, 0.5);
+      }
+
+      .apexcharts-xaxistooltip-top.dark:before {
+        border-top-color: rgba(0, 0, 0, 0.5);
+      }
+
+      .apexcharts-xaxistooltip.active {
+        opacity: 1;
+        transition: 0.15s ease all;
+      }
+
+      .apexcharts-yaxistooltip {
+        opacity: 0;
+        padding: 4px 10px;
+        pointer-events: none;
+        color: #373d3f;
+        font-size: 13px;
+        text-align: center;
+        border-radius: 2px;
+        position: absolute;
+        z-index: 10;
+        background: #eceff1;
+        border: 1px solid #90a4ae;
+      }
+
+      .apexcharts-yaxistooltip.dark {
+        background: rgba(0, 0, 0, 0.7);
+        border: 1px solid rgba(0, 0, 0, 0.5);
+        color: #fff;
+      }
+
+      .apexcharts-yaxistooltip:after,
+      .apexcharts-yaxistooltip:before {
+        top: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+      }
+
+      .apexcharts-yaxistooltip:after {
+        border-color: rgba(236, 239, 241, 0);
+        border-width: 6px;
+        margin-top: -6px;
+      }
+
+      .apexcharts-yaxistooltip:before {
+        border-color: rgba(144, 164, 174, 0);
+        border-width: 7px;
+        margin-top: -7px;
+      }
+
+      .apexcharts-yaxistooltip-left:after,
+      .apexcharts-yaxistooltip-left:before {
+        left: 100%;
+      }
+
+      .apexcharts-yaxistooltip-right:after,
+      .apexcharts-yaxistooltip-right:before {
+        right: 100%;
+      }
+
+      .apexcharts-yaxistooltip-left:after {
+        border-left-color: #eceff1;
+      }
+
+      .apexcharts-yaxistooltip-left:before {
+        border-left-color: #90a4ae;
+      }
+
+      .apexcharts-yaxistooltip-left.dark:after {
+        border-left-color: rgba(0, 0, 0, 0.5);
+      }
+
+      .apexcharts-yaxistooltip-left.dark:before {
+        border-left-color: rgba(0, 0, 0, 0.5);
+      }
+
+      .apexcharts-yaxistooltip-right:after {
+        border-right-color: #eceff1;
+      }
+
+      .apexcharts-yaxistooltip-right:before {
+        border-right-color: #90a4ae;
+      }
+
+      .apexcharts-yaxistooltip-right.dark:after {
+        border-right-color: rgba(0, 0, 0, 0.5);
+      }
+
+      .apexcharts-yaxistooltip-right.dark:before {
+        border-right-color: rgba(0, 0, 0, 0.5);
+      }
+
+      .apexcharts-yaxistooltip.active {
+        opacity: 1;
+      }
+
+      .apexcharts-yaxistooltip-hidden {
+        display: none;
+      }
+
+      .apexcharts-xcrosshairs,
+      .apexcharts-ycrosshairs {
+        pointer-events: none;
+        opacity: 0;
+        transition: 0.15s ease all;
+      }
+
+      .apexcharts-xcrosshairs.active,
+      .apexcharts-ycrosshairs.active {
+        opacity: 1;
+        transition: 0.15s ease all;
+      }
+
+      .apexcharts-ycrosshairs-hidden {
+        opacity: 0;
+      }
+
+      .apexcharts-zoom-rect {
+        pointer-events: none;
+      }
+
+      .apexcharts-selection-rect {
+        cursor: move;
+      }
+
+      .svg_select_points,
+      .svg_select_points_rot {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      .svg_select_points_l,
+      .svg_select_points_r {
+        cursor: ew-resize;
+        opacity: 1;
+        visibility: visible;
+        fill: #888;
+      }
+
+      .apexcharts-canvas.zoomable .hovering-zoom {
+        cursor: crosshair;
+      }
+
+      .apexcharts-canvas.zoomable .hovering-pan {
+        cursor: move;
+      }
+
+      .apexcharts-xaxis,
+      .apexcharts-yaxis {
+        pointer-events: none;
+      }
+
+      .apexcharts-zoom-icon,
+      .apexcharts-zoom-in-icon,
+      .apexcharts-zoom-out-icon,
+      .apexcharts-reset-zoom-icon,
+      .apexcharts-pan-icon,
+      .apexcharts-selection-icon,
+      .apexcharts-menu-icon,
+      .apexcharts-toolbar-custom-icon {
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        line-height: 24px;
+        color: #6e8192;
+        text-align: center;
+      }
+
+      .apexcharts-zoom-icon svg,
+      .apexcharts-zoom-in-icon svg,
+      .apexcharts-zoom-out-icon svg,
+      .apexcharts-reset-zoom-icon svg,
+      .apexcharts-menu-icon svg {
+        fill: #6e8192;
+      }
+
+      .apexcharts-selection-icon svg {
+        fill: #444;
+        transform: scale(0.76);
+      }
+
+      .dark .apexcharts-zoom-icon svg,
+      .dark .apexcharts-zoom-in-icon svg,
+      .dark .apexcharts-zoom-out-icon svg,
+      .dark .apexcharts-reset-zoom-icon svg,
+      .dark .apexcharts-pan-icon svg,
+      .dark .apexcharts-selection-icon svg,
+      .dark .apexcharts-menu-icon svg,
+      .dark .apexcharts-toolbar-custom-icon svg {
+        fill: #f3f4f5;
+      }
+
+      .apexcharts-canvas .apexcharts-zoom-icon.selected svg,
+      .apexcharts-canvas .apexcharts-selection-icon.selected svg,
+      .apexcharts-canvas .apexcharts-reset-zoom-icon.selected svg {
+        fill: #008ffb;
+      }
+
+      .light .apexcharts-selection-icon:not(.selected):hover svg,
+      .light .apexcharts-zoom-icon:not(.selected):hover svg,
+      .light .apexcharts-zoom-in-icon:hover svg,
+      .light .apexcharts-zoom-out-icon:hover svg,
+      .light .apexcharts-reset-zoom-icon:hover svg,
+      .light .apexcharts-menu-icon:hover svg {
+        fill: #333;
+      }
+
+      .apexcharts-selection-icon,
+      .apexcharts-menu-icon {
+        position: relative;
+      }
+
+      .apexcharts-reset-zoom-icon {
+        margin-left: 5px;
+      }
+
+      .apexcharts-zoom-icon,
+      .apexcharts-reset-zoom-icon,
+      .apexcharts-menu-icon {
+        transform: scale(0.85);
+      }
+
+      .apexcharts-zoom-in-icon,
+      .apexcharts-zoom-out-icon {
+        transform: scale(0.7);
+      }
+
+      .apexcharts-zoom-out-icon {
+        margin-right: 3px;
+      }
+
+      .apexcharts-pan-icon {
+        transform: scale(0.62);
+        position: relative;
+        left: 1px;
+        top: 0px;
+      }
+
+      .apexcharts-pan-icon svg {
+        fill: #fff;
+        stroke: #6e8192;
+        stroke-width: 2;
+      }
+
+      .apexcharts-pan-icon.selected svg {
+        stroke: #008ffb;
+      }
+
+      .apexcharts-pan-icon:not(.selected):hover svg {
+        stroke: #333;
+      }
+
+      .apexcharts-toolbar {
+        position: absolute;
+        z-index: 11;
+        top: 0px;
+        right: 3px;
+        max-width: 176px;
+        text-align: right;
+        border-radius: 3px;
+        padding: 0px 6px 2px 6px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .apexcharts-toolbar svg {
+        pointer-events: none;
+      }
+
+      .apexcharts-menu {
+        background: #fff;
+        position: absolute;
+        top: 100%;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        padding: 3px;
+        right: 10px;
+        opacity: 0;
+        min-width: 110px;
+        transition: 0.15s ease all;
+        pointer-events: none;
+      }
+
+      .apexcharts-menu.open {
+        opacity: 1;
+        pointer-events: all;
+        transition: 0.15s ease all;
+      }
+
+      .apexcharts-menu-item {
+        padding: 6px 7px;
+        font-size: 12px;
+        cursor: pointer;
+      }
+
+      .light .apexcharts-menu-item:hover {
+        background: #eee;
+      }
+
+      .dark .apexcharts-menu {
+        background: rgba(0, 0, 0, 0.7);
+        color: #fff;
+      }
+
+      @media screen and (min-width: 768px) {
+        .apexcharts-toolbar {
+          /*opacity: 0;*/
+        }
+
+        .apexcharts-canvas:hover .apexcharts-toolbar {
+          opacity: 1;
+        }
+      }
+
+      .apexcharts-datalabel.hidden {
+        opacity: 0;
+      }
+
+      .apexcharts-pie-label,
+      .apexcharts-datalabel,
+      .apexcharts-datalabel-label,
+      .apexcharts-datalabel-value {
+        cursor: default;
+        pointer-events: none;
+      }
+
+      .apexcharts-pie-label-delay {
+        opacity: 0;
+        animation-name: opaque;
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease;
+      }
+
+      .apexcharts-canvas .hidden {
+        opacity: 0;
+      }
+
+      .apexcharts-hide .apexcharts-series-points {
+        opacity: 0;
+      }
+
+      .apexcharts-area-series
+        .apexcharts-series-markers
+        .apexcharts-marker.no-pointer-events,
+      .apexcharts-line-series
+        .apexcharts-series-markers
+        .apexcharts-marker.no-pointer-events,
+      .apexcharts-radar-series path,
+      .apexcharts-radar-series polygon {
+        pointer-events: none;
+      }
+
+      /* markers */
+
+      .apexcharts-marker {
+        transition: 0.15s ease all;
+      }
+
+      @keyframes opaque {
+        0% {
+          opacity: 0;
+        }
+
+        100% {
+          opacity: 1;
+        }
+      }
+
+      /* Resize generated styles */
+      @keyframes resizeanim {
+        from {
+          opacity: 0;
+        }
+
+        to {
+          opacity: 0;
+        }
+      }
+
+      .resize-triggers {
+        animation: 1ms resizeanim;
+        visibility: hidden;
+        opacity: 0;
+      }
+
+      .resize-triggers,
+      .resize-triggers > div,
+      .contract-trigger:before {
+        content: " ";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .resize-triggers > div {
+        background: #eee;
+        overflow: auto;
+      }
+
+      .contract-trigger:before {
+        width: 200%;
+        height: 200%;
+      }
+    </style>
+  </head>
+
+  <body class="crm_body_bg">
+    <header>
+      <nav
+        class="sidebar vertical-scroll dark_sidebar ps-container ps-theme-default"
+        data-ps-id="3a9488de-b32d-3ede-41b2-6f8e5c02ca04"
+      >
+        <ul id="sidebar_menu" class="metismenu">
+          <li class="">
+            <a href="/dashboard" aria-expanded="false" class="active">
+              <div class="icon_menu">
+                <img
+                  src="/dashboard/assets/img/menu-icon/dashboard.svg"
+                  alt=""
+                />
+              </div>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <!-- <li class="">
+                <a class="has-arrow" href="index.html#" aria-expanded="false">
+                    <div class="icon_menu">
+                        <img src="/dashboard/assets/img/menu-icon/2.svg" alt="">
+                    </div>
+                    <span>Apps</span>
+                </a>
+                <ul>
+                    <li><a href="editor.html">editor</a></li>
+                    <li><a href="mail_box.html">Mail Box</a></li>
+                    <li><a href="chat.html">Chat</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </li>
+            <li class="">
+                <a class="has-arrow" href="index.html#" aria-expanded="false">
+                    <div class="icon_menu">
+                        <img src="/dashboard/assets/img/menu-icon/3.svg" alt="">
+                    </div>
+                    <span>UI Kits</span>
+                </a>
+                <ul>
+                    <li><a href="colors.html">colors</a></li>
+                    <li><a href="Alerts.html">Alerts</a></li>
+                    <li><a href="buttons.html">Buttons</a></li>
+                    <li><a href="modal.html">modal</a></li>
+                    <li><a href="dropdown.html">Droopdowns</a></li>
+                    <li><a href="Badges.html">Badges</a></li>
+                    <li><a href="Loading_Indicators.html">Loading Indicators</a></li>
+                    <li><a href="State_color.html">State color</a></li>
+                    <li><a href="typography.html">Typography</a></li>
+                    <li><a href="datepicker.html">Date Picker</a></li>
+                </ul>
+            </li>
+            <li class="">
+                <a class="has-arrow" href="index.html#" aria-expanded="false">
+                    <div class="icon_menu">
+                        <img src="/dashboard/assets/img/menu-icon/4.svg" alt="">
+                    </div>
+                    <span>forms</span>
+                </a>
+                <ul>
+                    <li><a href="Basic_Elements.html">Basic Elements</a></li>
+                    <li><a href="Groups.html">Groups</a></li>
+                    <li><a href="Max_Length.html">Max Length</a></li>
+                    <li><a href="Layouts.html">Layouts</a></li>
+                </ul>
+            </li>
+            <li class="">
+                <a href="Board.html" aria-expanded="false">
+                    <div class="icon_menu">
+                        <img src="/dashboard/assets/img/menu-icon/5.svg" alt="">
+                    </div>
+                    <span>Board</span>
+                </a>
+            </li>
+            <li class="">
+                <a href="invoice.html" aria-expanded="false">
+                    <div class="icon_menu">
+                        <img src="/dashboard/assets/img/menu-icon/6.svg" alt="">
+                    </div>
+                    <span>Invoice</span>
+                </a>
+            </li>
+            <li class="">
+                <a href="calender.html" aria-expanded="false">
+                    <div class="icon_menu">
+                        <img src="/dashboard/assets/img/menu-icon/7.svg" alt="">
+                    </div>
+                    <span>Calander</span>
+                </a>
+            </li>
+            <li class="">
+                <a class="has-arrow" href="index.html#" aria-expanded="false">
+                    <div class="icon_menu">
+                        <img src="/dashboard/assets/img/menu-icon/8.svg" alt="">
+                    </div>
+                    <span>Products</span>
+                </a>
+                <ul>
+                    <li><a href="Products.html">Products</a></li>
+                    <li><a href="Product_Details.html">Product Details</a></li>
+                    <li><a href="Cart.html">Cart</a></li>
+                    <li><a href="Checkout.html">Checkout</a></li>
+                </ul>
+            </li>
+            <li class="">
+                <a class="has-arrow" href="index.html#" aria-expanded="false">
+                    <div class="icon_menu">
+                        <img src="/dashboard/assets/img/menu-icon/8.svg" alt="">
+                    </div>
+                    <span>Icons</span>
+                </a>
+                <ul>
+                    <li><a href="Fontawesome_Icon.html">Fontawesome Icon</a></li>
+                    <li><a href="themefy_icon.html">themefy icon</a></li>
+                </ul>
+            </li>
+            <li class="">
+                <a class="has-arrow" href="index.html#" aria-expanded="false">
+                    <div class="icon_menu">
+                        <img src="/dashboard/assets/img/menu-icon/9.svg" alt="">
+                    </div>
+                    <span>Animations</span>
+                </a>
+                <ul>
+                    <li><a href="wow_animation.html">Animate</a></li>
+                    <li><a href="Scroll_Reveal.html">Scroll Reveal</a></li>
+                    <li><a href="tilt.html">Tilt Animation</a></li>
+                </ul>
+            </li>
+            <li class="">
+                <a class="has-arrow" href="index.html#" aria-expanded="false">
+                    <div class="icon_menu">
+                        <img src="/dashboard/assets/img/menu-icon/10.svg" alt="">
+                    </div>
+                    <span>Components</span>
+                </a>
+                <ul>
+                    <li><a href="accordion.html">Accordions</a></li>
+                    <li><a href="Scrollable.html">Scrollable</a></li>
+                    <li><a href="notification.html">Notifications</a></li>
+                    <li><a href="carousel.html">Carousel</a></li>
+                    <li><a href="Pagination.html">Pagination</a></li>
+                </ul>
+            </li>
+            <li class="">
+                <a class="has-arrow" href="index.html#" aria-expanded="false">
+                    <div class="icon_menu">
+                        <img src="/dashboard/assets/img/menu-icon/11.svg" alt="">
+                    </div>
+                    <span>Table</span>
+                </a>
+                <ul>
+                    <li><a href="data_table.html">Data Tables</a></li>
+                    <li><a href="bootstrap_table.html">Bootstrap</a></li>
+                </ul>
+            </li>
+            <li class="">
+                <a class="has-arrow" href="index.html#" aria-expanded="false">
+                    <div class="icon_menu">
+                        <img src="/dashboard/assets/img/menu-icon/12.svg" alt="">
+                    </div>
+                    <span>Cards</span>
+                </a>
+                <ul>
+                    <li><a href="basic_card.html">Basic Card</a></li>
+                    <li><a href="theme_card.html">Theme Card</a></li>
+                    <li><a href="dargable_card.html">Draggable Card</a></li>
+                </ul>
+            </li>
+            <li class="">
+                <a class="has-arrow" href="index.html#" aria-expanded="false">
+                    <div class="icon_menu">
+                        <img src="/dashboard/assets/img/menu-icon/13.svg" alt="">
+                    </div>
+                    <span>Charts</span>
+                </a>
+                <ul>
+                    <li><a href="chartjs.html">ChartJS</a></li>
+                    <li><a href="apex_chart.html">Apex Charts</a></li>
+                    <li><a href="chart_sparkline.html">Chart sparkline</a></li>
+                    <li><a href="am_chart.html">am-charts</a></li>
+                    <li><a href="nvd3_charts.html">nvd3 charts.</a></li>
+                </ul>
+            </li>
+            <li class="">
+                <a class="has-arrow" href="index.html#" aria-expanded="false">
+                    <div class="icon_menu">
+                        <img src="/dashboard/assets/img/menu-icon/14.svg" alt="">
+                    </div>
+                    <span>Widgets</span>
+                </a>
+                <ul>
+                    <li><a href="chart_box_1.html">Chart Boxes 1</a></li>
+                    <li><a href="profilebox.html">Profile Box</a></li>
+                </ul>
+            </li>
+            <li class="">
+                <a class="has-arrow" href="index.html#" aria-expanded="false">
+                    <div class="icon_menu">
+                        <img src="/dashboard/assets/img/menu-icon/15.svg" alt="">
+                    </div>
+                    <span>Maps</span>
+                </a>
+                <ul>
+                    <li><a href="mapjs.html">Maps JS</a></li>
+                    <li><a href="vector_map.html">Vector Maps</a></li>
+                </ul>
+            </li>
+            <li class="">
+                <a class="has-arrow" href="index.html#" aria-expanded="false">
+                    <div class="icon_menu">
+                        <img src="/dashboard/assets/img/menu-icon/16.svg" alt="">
+                    </div>
+                    <span>Pages</span>
+                </a>
+                <ul>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="resister.html">Register</a></li>
+                    <li><a href="error_400.html">Error 404</a></li>
+                    <li><a href="error_500.html">Error 500</a></li>
+                    <li><a href="forgot_pass.html">Forgot Password</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </li> -->
+        </ul>
+        <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 3px">
+          <div
+            class="ps-scrollbar-x"
+            tabindex="0"
+            style="left: 0px; width: 0px"
+          ></div>
+        </div>
+        <div class="ps-scrollbar-y-rail" style="top: 0px; right: 3px">
+          <div
+            class="ps-scrollbar-y"
+            tabindex="0"
+            style="top: 0px; height: 0px"
+          ></div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="main_content dashboard_part large_header_bg">
+      <div class="container-fluid g-0">
+        <div class="row">
+          <div class="col-lg-12 p-0">
+            <div
+              class="header_iner d-flex justify-content-between align-items-center"
+            >
+              <div class="sidebar_icon d-lg-none">
+                <i class="ti-menu"></i>
+              </div>
+              <div class="serach_field-area d-flex align-items-center">
+                <div class="search_inner">
+                  <form action="index.html#">
+                    <div class="search_field">
+                      <input type="text" placeholder="Search here..." />
+                    </div>
+                    <button type="submit">
+                      <img
+                        src="/dashboard/assets/img/icon/icon_search.svg"
+                        alt=""
+                      />
+                    </button>
+                  </form>
+                </div>
+                <span class="f_s_14 f_w_400 ml_25 white_text text_white"
+                  >Apps</span
+                >
+              </div>
+              <div
+                class="header_right d-flex justify-content-between align-items-center"
+              >
+                <div class="profile_info">
+                  <img
+                    src="https://res.cloudinary.com/samdos-express/image/upload/v1681999375/user.jpg"
+                    alt="#"
+                  />
+                  <div class="profile_info_iner">
+                    <div class="profile_author_name">
+                      <h5></h5>
+                    </div>
+                    <div class="profile_info_details">
+                      <a href="/profile">My Profile </a>
+                      <a href="/setting">Settings</a>
+                      <a href="/logout">Log Out </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main_content_iner overly_inner">
+        <div class="container-fluid p-0 sm_padding_15px">
+          <div class="row">
+            <div class="col-12">
+              <div
+                class="page_title_box d-flex align-items-center justify-content-between"
+              >
+                <div class="page_title_left">
+                  <h3 class="f_s_30 f_w_700 text_white">Admission Letter</h3>
+                  <ol class="breadcrumb page_bradcam mb-0">
+                    <li class="breadcrumb-item">Dashboard</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-8 mx-auto p-0 m-0">
+              <div class="white_card card_height_100 mb_30">
+                <div class="white_card_header">
+                  <div class="box_header m-0">
+                    <div class="main-title"></div>
+                  </div>
+                </div>
+                <div class="white_card_body">
+                  <div id="contentToPrint">
+                    <div class="main-title mb-25 text-end">
+                      <h3 class="m-0">13th May 2023</h3>
+                    </div>
+                    <div class="main-title mb-25 pt_30">
+                      <h3 class="m-0">THROUGH:</h3>
+                      <p>The Head Teacher,</p>
+                      <p>Priesthood Nursery & Primary School</p>
+                    </div>
+
+                    <div class="main-title mb-25">
+                      <h3 class="m-0">Attention:</h3>
+                      <p>Mr. & Mrs. OKUNZUWA,</p>
+                      <p>Dear Sir/Madam,</p>
+                    </div>
+
+                    <div class="main-title mb-25 text-start">
+                      <h3 class="m-0 fs-4 text-center">
+                        OFFER OF PROVISIONAL ADMISSION
+                      </h3>
+                      <p class="pt_30">
+                        With reference to the recent Entrance Examination
+                        conducted, we want to inform you that OKUNZUWA GABRIEL
+                        has been offered a provisional admission to JS 1
+                        beginning from 1ST TERM in the 2023/2024 academic
+                        session.
+                      </p>
+                      <br />
+                      <p>
+                        Meanwhile, the applicant, both parents and a
+                        representative of the school are expected to attend a
+                        compulsory interview either on Thursday 18th May, 2023
+                        or Saturday, 20th May, 2023 (between 8:00am & 10:00am)
+                        at Lagooz Schools, Omotoye Campus, where you will have
+                        the opportunity to meet with people that will mould the
+                        life of your child beyond your expectation. On arrival,
+                        call Grace Solomon 08039114549, Busola 08034403800 or
+                        Kemi 08062714964 for your interview. Interview venue:
+                        INTERACTIVE ROOM.
+                      </p>
+                      <br />
+                      <p>
+                        The following officers shall be available to discuss
+                        with you and you shall also have the privilege to air
+                        your mind and ask questions:
+                      </p>
+
+                      <br />
+
+                      <div class="">
+                        <p class="text-start">
+                          i. &nbsp; &nbsp; The Proprietor
+                        </p>
+                        <p class="text-end">
+                          ii. &nbsp; &nbsp; The The Principal
+                        </p>
+                        <p class="text-start">
+                          iii. &nbsp; &nbsp; The Vice Principal (Admin)
+                        </p>
+                        <p class="text-end">
+                          iv. &nbsp; &nbsp; The School Counselor
+                        </p>
+                        <p class="text-start">
+                          v. &nbsp; &nbsp; The Vice Principal (Academics)
+                        </p>
+                        <p class="text-end">
+                          vi. &nbsp; &nbsp; The Hostel Matron, e.t.c.
+                        </p>
+                        <p class="text-start">
+                          v. &nbsp; &nbsp; The School Nurse
+                        </p>
+                      </div>
+
+                      <div class="main-title mb-25 text-start pt_30">
+                        <h3 class="m-0">
+                          Kindly come with the following items:
+                        </h3>
+                      </div>
+                      <div class="">
+                        <p class="text-start">
+                          1. &nbsp; &nbsp; Photocopy of birth Certificate and
+                          Original copy for sighting
+                        </p>
+                        <p class="text-start">
+                          2. &nbsp; &nbsp; Photocopy of last Examination result
+                          sheet of former school and original for sighting
+                        </p>
+                        <p class="text-start">
+                          3. &nbsp; &nbsp; A medical report from any
+                          government-owned hospital or laboratory, or any one
+                          recommended by Lagooz School. (See attached paper)
+                        </p>
+                      </div>
+                      <div class="pt_30">
+                        <p class="text-start">
+                          Please, note that this offer of Provisional Admission
+                          is subject to your fulfilling the required conditions
+                          stated above and attending the interview. Failing to
+                          abide by the afore-stated conditions may result in
+                          withdrawal of the admission. Meanwhile 10% of the
+                          tuition should be paid within one month of receiving
+                          this letter as an acceptance fee while the balance
+                          will be paid on or before the first day of school
+                          resumption.
+                        </p>
+                        <br />
+                        <p class="text-start">
+                          You may get in touch with the school proprietor, the
+                          School Principal or any of our front desk officers on
+                          the following numbers: 08023852010 and 08033205357
+                        </p>
+                        <p class="text-start">
+                          Congratulations on your child’s admission.
+                        </p>
+                      </div>
+                      <div class="main-title mb-25 pt_30 text-start">
+                        <h3 class="m-0">Your's faithfully</h3>
+
+                        <img
+                          class="w-15"
+                          src="https://res.cloudinary.com/dyvog4dzo/image/upload/v1684421488/WhatsApp_Image_2023-05-18_at_3.40.16_PM_k46kwb.jpg"
+                          alt=""
+                        />
+
+                        <p>Chief/Mrs. Otubela E. O.</p>
+                        <p>Principal</p>
+                      </div>
+                    </div>
+                  </div>
+                  <button
+                    class="btn btn-primary"
+                    onclick="printDiv('contentToPrint','Title')"
+                  >
+                    Print
+                  </button>
+
+                  <button
+                    class="btn btn-primary"
+                    onclick="Convert_HTML_To_PDF();"
+                  >
+                    Save as PDF
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer_part">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="footer_iner text-center">
+                <p>
+                  ©
+                  <script>
+                    document.write(new Date().getFullYear());
+                  </script>
+                  2023 - Designed by
+                  <a href="https://edu-central.org">eduCENTRAL</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="back-top" style="display: none">
+      <a title="Go to Top" href="index.html#">
+        <i class="ti-angle-up"></i>
+      </a>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <script>
+      window.jsPDF = window.jspdf.jsPDF;
+      function Convert_HTML_To_PDF() {
+        var doc = new jsPDF();
+
+        // Source HTMLElement or a string containing HTML.
+        var elementHTML = document.querySelector("#contentToPrint");
+
+        // Add a margin to the main content
+        elementHTML.style.marginTop = "30%";
+        elementHTML.style.backgroundColor = "rgba(255, 255, 255, 0.5)";
+
+        // Load the background image
+        var backgroundImage = new Image();
+        backgroundImage.src =
+          "https://res.cloudinary.com/dyvog4dzo/image/upload/v1684424036/LAGOOZ_SCHOOLS_NEW_LETTERHEAD_tx5pyk.jpg";
+
+        // Wait for the image to load
+        backgroundImage.onload = function () {
+          // Add the background image to the PDF
+          doc.addImage(
+            backgroundImage,
+            "JPEG",
+            0,
+            0,
+            doc.internal.pageSize.getWidth(),
+            doc.internal.pageSize.getHeight()
+          );
+
+          // Generate the PDF from HTML
+          doc.html(elementHTML, {
+            callback: function (doc) {
+              // Save the PDF
+              doc.save("document-html.pdf");
+            },
+            margin: [10, 10, 10, 10],
+            autoPaging: "text",
+            x: 0,
+            y: 0,
+            width: 190, //target width in the PDF document
+            windowWidth: 675, //window width in CSS pixels
+          });
+        };
+      }
+
+      // printing
+      function saveDiv(divId, title) {
+        doc.fromHTML(
+          `<html><head><title>${title}</title></head><body>` +
+            document.getElementById(contentToPrint).innerHTML +
+            `</body></html>`
+        );
+        doc.save("div.pdf");
+      }
+
+      function printDiv(divId, title) {
+        let mywindow = window.open(
+          "",
+          "PRINT",
+          "height=650,width=900,top=100,left=150"
+        );
+
+        mywindow.document.write(`<html><head><title>${title}</title>`);
+        mywindow.document.write(
+          '<link rel="stylesheet" href="/css/bootstrap1.min.css" />'
+        );
+        mywindow.document.write("<style>");
+        mywindow.document.write(`
+          h3 {
+            font-size: 26px;
+          }
+          h4 {
+            font-size: 20px;
+          }
+          h5 {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.8;
+          }
+          .main-title h3 {
+            font-family: nunito, sans-serif;
+            font-weight: 700;
+            font-size: 13px;
+            color: #101038;
+          }
+          .text-start {
+        text-align: left !important;
+      }
+      .text-end {
+        text-align: right !important;
+      }
+      .text-center {
+        text-align: center !important;
+      }
+      .w-25 {
+        width: 25% !important;
+      }
+      .pt_30 {
+        padding-top: 30px !important;
+      }
+        `);
+        mywindow.document.write("</style>");
+        mywindow.document.write(
+          '<link rel="stylesheet" href="/css/style1.css" />'
+        );
+        mywindow.document.write("</head><body>");
+        mywindow.document.write(document.getElementById(divId).innerHTML);
+        mywindow.document.write("</body></html>");
+
+        mywindow.document.close();
+        mywindow.focus();
+
+        mywindow.print();
+        mywindow.close();
+
+        return true;
+      }
+    </script>
+
+    <script src="/dashboard/assets/js/jquery1-3.4.1.min.js"></script>
+    <script src="/dashboard/assets/js/popper1.min.js"></script>
+    <script src="/dashboard/assets/js/metisMenu.js"></script>
+    <script src="/dashboard/assets/vendors/count_up/jquery.waypoints.min.js"></script>
+    <script src="/dashboard/assets/vendors/chartlist/Chart.min.js"></script>
+    <script src="/dashboard/assets/vendors/count_up/jquery.counterup.min.js"></script>
+    <script src="/dashboard/assets/vendors/niceselect/js/jquery.nice-select.min.js"></script>
+    <script src="/dashboard/assets/vendors/owl_carousel/js/owl.carousel.min.js"></script>
+    <script src="/dashboard/assets/vendors/datatable/js/jquery.dataTables.min.js"></script>
+    <script src="/dashboard/assets/vendors/datatable/js/dataTables.responsive.min.js"></script>
+    <script src="/dashboard/assets/vendors/datatable/js/dataTables.buttons.min.js"></script>
+    <script src="/dashboard/assets/vendors/datatable/js/buttons.flash.min.js"></script>
+    <script src="/dashboard/assets/vendors/datatable/js/jszip.min.js"></script>
+    <script src="/dashboard/assets/vendors/datatable/js/pdfmake.min.js"></script>
+    <script src="/dashboard/assets/vendors/datatable/js/vfs_fonts.js"></script>
+    <script src="/dashboard/assets/vendors/datatable/js/buttons.html5.min.js"></script>
+    <script src="/dashboard/assets/vendors/datatable/js/buttons.print.min.js"></script>
+    <script src="/dashboard/assets/vendors/datepicker/datepicker.js"></script>
+    <script src="/dashboard/assets/vendors/datepicker/datepicker.en.js"></script>
+    <script src="/dashboard/assets/vendors/datepicker/datepicker.custom.js"></script>
+    <script src="/dashboard/assets/js/chart.min.js"></script>
+    <script src="/dashboard/assets/vendors/chartjs/roundedBar.min.js"></script>
+    <script src="/dashboard/assets/vendors/progressbar/jquery.barfiller.js"></script>
+    <script src="/dashboard/assets/vendors/tagsinput/tagsinput.js"></script>
+    <script src="/dashboard/assets/vendors/text_editor/summernote-bs4.js"></script>
+    <script src="/dashboard/assets/vendors/am_chart/amcharts.js"></script>
+    <script src="/dashboard/assets/vendors/scroll/perfect-scrollbar.min.js"></script>
+    <script src="/dashboard/assets/vendors/scroll/scrollable-custom.js"></script>
+    <script src="/dashboard/assets/vendors/vectormap-home/vectormap-2.0.2.min.js"></script>
+    <script src="/dashboard/assets/vendors/vectormap-home/vectormap-world-mill-en.js"></script>
+    <script src="/dashboard/assets/vendors/apex_chart/apex-chart2.js"></script>
+    <script src="/dashboard/assets/vendors/apex_chart/apex_dashboard.js"></script>
+    <script src="/dashboard/assets/vendors/echart/echarts.min.js"></script>
+    <script src="/dashboard/assets/vendors/chart_am/core.js"></script>
+    <script src="/dashboard/assets/vendors/chart_am/charts.js"></script>
+    <script src="/dashboard/assets/vendors/chart_am/animated.js"></script>
+    <script src="/dashboard/assets/vendors/chart_am/kelly.js"></script>
+    <script src="/dashboard/assets/vendors/chart_am/chart-custom.js"></script>
+    <script src="/dashboard/assets/js/dashboard_init.js"></script>
+    <div class="jvectormap-tip"></div>
+    <script src="/dashboard/assets/js/custom.js"></script>
+
+    <svg
+      id="SvgjsSvg1001"
+      width="2"
+      height="0"
+      xmlns="http://www.w3.org/2000/svg"
+      version="1.1"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:svgjs="http://svgjs.com/svgjs"
+      style="
+        overflow: hidden;
+        top: -100%;
+        left: -100%;
+        position: absolute;
+        opacity: 0;
+      "
+    >
+      <defs id="SvgjsDefs1002"></defs>
+      <polyline id="SvgjsPolyline1003" points="0,0"></polyline>
+      <path id="SvgjsPath1004" d="M0 0 "></path>
+    </svg>
+  </body>
+</html>

@@ -1,0 +1,1854 @@
+<body class="crm_body_bg">
+  <style>
+    label,
+    a {
+      cursor: pointer;
+      user-select: none;
+      text-decoration: none;
+      display: inline-block;
+      color: inherit;
+      transition: border 0.2s;
+      /* border-bottom: 1px solid #1c799a; */
+      padding: 3px 2px;
+    }
+    label:hover,
+    a:hover {
+      border-bottom-color: #1c799a;
+    }
+
+    .layout {
+      display: grid;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      grid-template-rows: 50px 1fr;
+      grid-template-columns: 1fr 1fr 1fr ;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    label.nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border-bottom: 2px solid #1c799a;
+      background: #ecf0f1;
+      user-select: none;
+      transition: background 0.4s, padding-left 0.2s;
+      padding-left: 0;
+    }
+    input[type="radio"]:checked + .page + label.nav {
+      background: #1c799a;
+      color: #ffffff;
+      padding-left: 20px;
+    }
+    input[type="radio"]:checked + .page + label.nav span {
+      padding-left: 20px;
+    }
+    input[type="radio"]:checked + .page + label.nav svg {
+      opacity: 1;
+    }
+    label.nav span {
+      padding-left: 0px;
+      position: relative;
+    }
+    label.nav svg {
+      left: 0;
+      top: -3px;
+      position: absolute;
+      width: 15px;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+
+    .page {
+      grid-column-start: 1;
+      grid-row-start: 2;
+      grid-column-end: span 3;
+      padding: 0px 20px;
+      align-items: center;
+    }
+
+    .page-contents > * {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .page-contents > *:nth-child(1) {
+      transition-delay: 0.4s;
+    }
+    .page-contents > *:nth-child(2) {
+      transition-delay: 0.6s;
+    }
+    .page-contents > *:nth-child(3) {
+      transition-delay: 0.8s;
+    }
+    .page-contents > *:nth-child(4) {
+      transition-delay: 1s;
+    }
+    .page-contents > *:nth-child(5) {
+      transition-delay: 1.2s;
+    }
+    .page-contents > *:nth-child(6) {
+      transition-delay: 1.4s;
+    }
+    .page-contents > *:nth-child(7) {
+      transition-delay: 1.6s;
+    }
+    .page-contents > *:nth-child(8) {
+      transition-delay: 1.8s;
+    }
+    .page-contents > *:nth-child(9) {
+      transition-delay: 2s;
+    }
+    .page-contents > *:nth-child(10) {
+      transition-delay: 2.2s;
+    }
+    .page-contents > *:nth-child(11) {
+      transition-delay: 2.4s;
+    }
+    .page-contents > *:nth-child(12) {
+      transition-delay: 2.6s;
+    }
+    .page-contents > *:nth-child(13) {
+      transition-delay: 2.8s;
+    }
+    .page-contents > *:nth-child(14) {
+      transition-delay: 3s;
+    }
+    .page-contents > *:nth-child(15) {
+      transition-delay: 3.2s;
+    }
+    .page-contents > *:nth-child(16) {
+      transition-delay: 3.4s;
+    }
+    .page-contents > *:nth-child(17) {
+      transition-delay: 3.6s;
+    }
+    .page-contents > *:nth-child(18) {
+      transition-delay: 3.8s;
+    }
+    .page-contents > *:nth-child(19) {
+      transition-delay: 4s;
+    }
+    .page-contents > *:nth-child(20) {
+      transition-delay: 4.2s;
+    }
+
+    input[type="radio"] + .page {
+      transition: transform 0.2s;
+      transform: translateX(100%);
+    }
+
+    input[type="radio"]:checked + .page {
+      transform: translateX(0%);
+    }
+    input[type="radio"]:checked + .page .page-contents > * {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+
+    .page-contents {
+      max-width: 100%;
+      /* width: 500px; */
+    }
+  </style>
+  <nav
+    class="sidebar vertical-scroll dark_sidebar ps-container ps-theme-default ps-active-y"
+  >
+    <div class="logo d-flex justify-content-between">
+      <a href="#"
+        ><img style="width: 40px" src="img/qc.png" alt="" />
+        <span
+          style="
+            padding-left: 10px;
+            margin-top: 80px;
+            color: #fff;
+            font: 900;
+            font-size: 16px;
+          "
+          >Study Abroad</span
+        ></a
+      >
+      <div class="sidebar_close_icon d-lg-none">
+        <i class="ti-close"></i>
+      </div>
+    </div>
+    <ul id="sidebar_menu">
+      <li class="active">
+        <a class="active" href="/dashboard" aria-expanded="false">
+          <div class="icon_menu">
+            <img src="img/menu-icon/dashboard.svg" alt="" />
+          </div>
+          <span>Dashboard</span>
+        </a>
+      </li>
+      <li class="mm-active">
+        <a class="has-arrow" href="#" aria-expanded="false">
+          <div class="icon_menu">
+            <img src="img/menu-icon/4.svg" alt="" />
+          </div>
+          <span>Applications</span>
+        </a>
+        <ul>
+          <li><a class="active" href="#">Parthner Application</a></li>
+          <li><a href="/form1">Single Application</a></li>
+        </ul>
+      </li>
+      <li class="active">
+        <a class="active" href="/applicationstatus" aria-expanded="false">
+          <div class="icon_menu">
+            <img src="img/menu-icon/dashboard.svg" alt="" />
+          </div>
+          <span>Application Status</span>
+        </a>
+      </li>
+      <li class="active">
+        <a class="active" href="/applicationdetails" aria-expanded="false">
+          <div class="icon_menu">
+            <img src="img/menu-icon/dashboard.svg" alt="" />
+          </div>
+          <span>Application Details</span>
+        </a>
+      </li>
+      <li class="active">
+        <a href="/logout" aria-expanded="false">
+          <div class="icon_menu">
+            <img src="img/menu-icon/dashboard.svg" alt="" />
+          </div>
+          <span>Sign Out</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <section class="main_content dashboard_part large_header_bg">
+    <div class="container-fluid g-0">
+      <div class="row">
+        <div class="col-lg-12 p-0">
+          <div
+            class="header_iner d-flex justify-content-between align-items-center"
+          >
+            <div class="sidebar_icon d-lg-none">
+              <i class="ti-menu"></i>
+            </div>
+            <div class="serach_field-area d-flex align-items-center">
+              <div class="search_inner">
+                <form action="index.html#">
+                  <div class="search_field">
+                    <input type="text" placeholder="Search here..." />
+                  </div>
+                  <button type="submit">
+                    <img src="img/icon/icon_search.svg" alt="" />
+                  </button>
+                </form>
+              </div>
+              <span class="f_s_14 f_w_400 ml_25 white_text text_white"
+                >Apps</span
+              >
+            </div>
+            <div
+              class="header_right d-flex justify-content-between align-items-center"
+            >
+              <div class="profile_info">
+                <img src="img/client_img.png" alt="#" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main_content_iner">
+      <div class="container-fluid p-0"></div>
+      <!-- yeah -->
+      <div class="layout">
+        <input
+          name="nav"
+          type="radio"
+          class="nav home-radio"
+          id="home"
+          checked="checked"
+        />
+        <div class="page home-page">
+          <div class="page-contents">
+            <div class="mb-3"></div>
+            <div class="mb-3"></div>
+            <div class="row mb-3">
+              <div class="col-lg-6">
+                <div class="messages_box_area">
+                  <div class="messages_list">
+                    <div class="white_box">
+                      <div class="white_box_tittle list_header">
+                        <h4>Personal Details</h4>
+                      </div>
+
+                      <ul>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Fullname:</h4>
+                                <p>
+                                  <%= application.firstname %> <%=
+                                  application.lastname %> <%=
+                                  application.middlename %>
+                                </p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Date of Birth:</h4>
+                                <p><%= application.dob %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>First Language:</h4>
+                                <p><%= application.first_language %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Country of citizenship:</h4>
+                                <p><%= application.country_of_citizenship %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Gender:</h4>
+                                <p><%= application.gender %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Marital Status:</h4>
+                                <p><%= application.marital_status %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>State of Residence:</h4>
+                                <p><%= application.state %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="messages_box_area">
+                  <div class="messages_list">
+                    <div class="white_box">
+                      <div class="white_box_tittle list_header">
+                        <h4>Personal Details</h4>
+                      </div>
+
+                      <ul>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>phone:</h4>
+                                <p><%= application.phone %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Email:</h4>
+                                <p><%= application.email %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Residential/Mailing address:</h4>
+                                <p><%= application.address %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>International passport number (ID):</h4>
+                                <p><%= application.i_p_id %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>International passport: date of Issue:</h4>
+                                <p><%= application.i_p_issue_date %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>International passport: expiry date:</h4>
+                                <p><%= application.i_p_expiry_date %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>
+                                  International passport: Issuing authority:
+                                </h4>
+                                <p><%= application.i_p_issue_auth %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <div class="col-lg-6">
+                <div class="messages_box_area">
+                  <div class="messages_list">
+                    <div class="white_box">
+                      <div class="white_box_tittle list_header">
+                        <h4>Accademic & emergency Details</h4>
+                      </div>
+
+                      <ul>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Academic Category:</h4>
+                                <p><%= application.academic_c %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Date of Higher Education Award:</h4>
+                                <p><%= application.date_h_e_a %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Class Award:</h4>
+                                <p><%= application.class_award %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>CGPA:</h4>
+                                <p><%= application.cgpa %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Emergency Contact First Name:</h4>
+                                <p><%= application.e_firstname %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Emergency Contact Last Name:</h4>
+                                <p><%= application.e_lastname %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Emergency Contact Middle Name:</h4>
+                                <p><%= application.e_middlename %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Emergency Contact Email:</h4>
+                                <p><%= application.e_email %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Emergency Contact Address:</h4>
+                                <p><%= application.e_address %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Emergency Contact Phone:</h4>
+                                <p><%= application.e_phone %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Emergency Contact Relationship:</h4>
+                                <p><%= application.e_relationship %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="messages_box_area">
+                  <div class="messages_list">
+                    <div class="white_box">
+                      <div class="white_box_tittle list_header">
+                        <h4>English Test Details</h4>
+                      </div>
+
+                      <ul>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>English Test:</h4>
+                                <p><%= application.english_test %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>English Score:</h4>
+                                <p><%= application.english_score %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>English Test Date:</h4>
+                                <p><%= application.english_date %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Other Language:</h4>
+                                <p><%= application.other_language %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Other Language Score:</h4>
+                                <p><%= application.other_language_score %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Other Language Test Date:</h4>
+                                <p><%= application.other_language_date %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Other Exam:</h4>
+                                <p><%= application.other_exam %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Other Exam Score:</h4>
+                                <p><%= application.other_exam_score %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Other Exam Date:</h4>
+                                <p><%= application.other_exam_date %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="white_card_body">
+              <div
+                class="row photo_gallery gallery justify-content-center"
+                id="aniimated-thumbnials"
+                itemscope=""
+              >
+                
+                <figure
+                  class="col-lg-6 col-md-6 mb_30 reveal"
+                  itemprop="associatedMedia"
+                  itemscope=""
+                >
+                  <a
+                    href="<%= application.cv_resume %>"
+                    itemprop="contentUrl"
+                    data-size="1600x950"
+                    ><img
+                      class="img-thumbnail"
+                      src="<%= application.cv_resume %>"
+                      itemprop="thumbnail"
+                      alt="Image description"
+                  /></a>
+                  Cv/Resume 
+                </figure>
+                <figure
+                  class="col-lg-6 col-md-6 mb_30 reveal"
+                  itemprop="associatedMedia"
+                  itemscope=""
+                >
+                  <a
+                    href="<%= application.passport %>"
+                    itemprop="contentUrl"
+                    data-size="1600x950"
+                    ><img
+                      class="img-thumbnail"
+                      src="<%= application.passport %>"
+                      itemprop="thumbnail"
+                      alt="Image description"
+                  /></a>
+                  Passport
+                </figure>
+                <figure
+                  class="col-lg-6 col-md-6 mb_30 reveal"
+                  itemprop="associatedMedia"
+                  itemscope=""
+                >
+                  <a
+                    href="<%= application.international_passport %>"
+                    itemprop="contentUrl"
+                    data-size="1600x950"
+                    ><img
+                      class="img-thumbnail"
+                      src="<%= application.international_passport %>"
+                      itemprop="thumbnail"
+                      alt="Image description"
+                  /></a>
+                 International Passport
+                </figure>
+              
+              
+              
+              </div>
+
+              <div
+                class="pswp"
+                tabindex="-1"
+                role="dialog"
+                aria-hidden="true"
+              >
+                <div class="pswp__bg"></div>
+                <div class="pswp__scroll-wrap">
+                  <div class="pswp__container">
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                  </div>
+                  <div class="pswp__ui pswp__ui--hidden">
+                    <div class="pswp__top-bar">
+                      <div class="pswp__counter"></div>
+                      <button
+                        class="pswp__button pswp__button--close"
+                        title="Close (Esc)"
+                      ></button>
+                      <button
+                        class="pswp__button pswp__button--share"
+                        title="Share"
+                      ></button>
+                      <button
+                        class="pswp__button pswp__button--fs"
+                        title="Toggle fullscreen"
+                      ></button>
+                      <button
+                        class="pswp__button pswp__button--zoom"
+                        title="Zoom in/out"
+                      ></button>
+                      <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                          <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"
+                    >
+                      <div class="pswp__share-tooltip"></div>
+                    </div>
+                    <button
+                      class="pswp__button pswp__button--arrow--left"
+                      title="Previous (arrow left)"
+                    ></button>
+                    <button
+                      class="pswp__button pswp__button--arrow--right"
+                      title="Next (arrow right)"
+                    ></button>
+                    <div class="pswp__caption">
+                      <div class="pswp__caption__center"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <label class="nav" for="home">
+          <span> Information </span>
+        </label>
+
+        <input name="nav" type="radio" class="about-radio" id="about" />
+        <div class="page about-page">
+          <div class="page-contents">
+            <div class="mb-10">
+              <div class="mb-3"></div>
+            </div>
+
+            <div class="row mb-3">
+              <div class="col-lg-6">
+                <div class="messages_box_area">
+                  <div class="messages_list">
+                    <div class="white_box">
+                      <div class="white_box_tittle list_header">
+                        <h4>Elementary School Details</h4>
+                      </div>
+
+                      <ul>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Elementary School:</h4>
+                                <p><%= application.es_school %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Country:</h4>
+                                <p><%= application.es_country %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Address:</h4>
+                                <p><%= application.es_address %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Date Started:</h4>
+                                <p><%= application.es_date_start %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Date Ended:</h4>
+                                <p><%= application.es_date_end %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Certificate:</h4>
+                                <p><%= application.es_certificate %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Certificate Date:</h4>
+                                <p><%= application.es_date_c %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Grade Award:</h4>
+                                <p><%= application.es_grade_award %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Other Information:</h4>
+                                <p><%= application.es_other %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6">
+                <div class="messages_box_area">
+                  <div class="messages_list">
+                    <div class="white_box">
+                      <div class="white_box_tittle list_header">
+                        <h4>Elementary School Details</h4>
+                      </div>
+
+                      <ul>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Other Elementary School:</h4>
+                                <p><%= application.es_school_other %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Country:</h4>
+                                <p><%= application.es_country_other %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Address:</h4>
+                                <p><%= application.es_address_other %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Date Started:</h4>
+                                <p><%= application.es_date_start_other %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Date Ended:</h4>
+                                <p><%= application.es_date_end_other %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Certificate:</h4>
+                                <p><%= application.es_certificate_other %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Certificate Date:</h4>
+                                <p><%= application.es_date_c_other %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Grade Award:</h4>
+                                <p><%= application.es_grade_award_other %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Other Information:</h4>
+                                <p><%= application.es_other_other %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-lg-6">
+                <div class="messages_box_area">
+                  <div class="messages_list">
+                    <div class="white_box">
+                      <div class="white_box_tittle list_header">
+                        <h4>High School Details</h4>
+                      </div>
+
+                      <ul>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>High School:</h4>
+                                <p><%= application.ts_school %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Country:</h4>
+                                <p><%= application.ts_country %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Address:</h4>
+                                <p><%= application.ts_address %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Date Started:</h4>
+                                <p><%= application.ts_date_start %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Date Ended:</h4>
+                                <p><%= application.ts_date_end %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Certificate:</h4>
+                                <p><%= application.ts_certificate %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Certificate Date:</h4>
+                                <p><%= application.ts_date_c %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Grade Award:</h4>
+                                <p><%= application.ts_grade_award %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Other Information:</h4>
+                                <p><%= application.ts_other %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="messages_box_area">
+                  <div class="messages_list">
+                    <div class="white_box">
+                      <div class="white_box_tittle list_header">
+                        <h4>High School Details</h4>
+                      </div>
+
+                      <ul>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Other High School:</h4>
+                                <p><%= application.ts_school_other %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Country:</h4>
+                                <p><%= application.ts_country_other %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Address:</h4>
+                                <p><%= application.ts_address_other %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Date Started:</h4>
+                                <p><%= application.ts_date_start_other %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Date Ended:</h4>
+                                <p><%= application.ts_date_end_other %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Certificate:</h4>
+                                <p><%= application.ts_certificate_other %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Certificate Date:</h4>
+                                <p><%= application.ts_date_c_other %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Grade Award:</h4>
+                                <p><%= application.ts_grade_award_other %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Other Information:</h4>
+                                <p><%= application.ts_other_other %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-lg-12">
+                <div class="messages_box_area">
+                  <div class="messages_list">
+                    <div class="white_box">
+                      <div class="white_box_tittle list_header">
+                        <h4>High School Details</h4>
+                      </div>
+
+                      <ul>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Other School Country:</h4>
+                                <p><%= application.tss_country_other %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Address:</h4>
+                                <p><%= application.tss_address_other %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Date Started:</h4>
+                                <p><%= application.tss_date_start_other %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Date Ended:</h4>
+                                <p><%= application.tss_date_end_other %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Certificate:</h4>
+                                <p><%= application.tss_certificate_other %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Certificate Date:</h4>
+                                <p><%= application.tss_date_c_other %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Grade Award:</h4>
+                                <p><%= application.tss_grade_award_other %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Other Information:</h4>
+                                <p><%= application.tss_other_other %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="white_card_body">
+              <div
+                class="row photo_gallery gallery justify-content-center"
+                id="aniimated-thumbnials"
+                itemscope=""
+              >
+                
+                <figure
+                  class="col-lg-6 col-md-6 mb_30 reveal"
+                  itemprop="associatedMedia"
+                  itemscope=""
+                >
+                  <a
+                    href="<%= application.secondary_certificate %>"
+                    itemprop="contentUrl"
+                    data-size="1600x950"
+                    ><img
+                      class="img-thumbnail"
+                      src="<%= application.secondary_certificate %>"
+                      itemprop="thumbnail"
+                      alt="Image description"
+                  /></a>
+                  Secondary Certificate
+                </figure>
+                <figure
+                  class="col-lg-6 col-md-6 mb_30 reveal"
+                  itemprop="associatedMedia"
+                  itemscope=""
+                >
+                  <a
+                    href="<%= application.undergraduate_certificate %>"
+                    itemprop="contentUrl"
+                    data-size="1600x950"
+                    ><img
+                      class="img-thumbnail"
+                      src="<%= application.undergraduate_certificate %>"
+                      itemprop="thumbnail"
+                      alt="Image description"
+                  /></a>
+                  Undergraduate Certificate
+                </figure>
+                <figure
+                  class="col-lg-6 col-md-6 mb_30 reveal"
+                  itemprop="associatedMedia"
+                  itemscope=""
+                >
+                  <a
+                    href="<%= application.graduate_certificate %>"
+                    itemprop="contentUrl"
+                    data-size="1600x950"
+                    ><img
+                      class="img-thumbnail"
+                      src="<%= application.graduate_certificate %>"
+                      itemprop="thumbnail"
+                      alt="Image description"
+                  /></a>
+                 Graduate Certificate
+                </figure>
+                <figure
+                class="col-lg-6 col-md-6 mb_30 reveal"
+                itemprop="associatedMedia"
+                itemscope=""
+              >
+                <a
+                  href="<%= application.post_certificate %>"
+                  itemprop="contentUrl"
+                  data-size="1600x950"
+                  ><img
+                    class="img-thumbnail"
+                    src="<%= application.post_certificate %>"
+                    itemprop="thumbnail"
+                    alt="Image description"
+                /></a>
+                Post Graduate Certificate
+              </figure>
+              
+              
+              
+              </div>
+
+              <div
+                class="pswp"
+                tabindex="-1"
+                role="dialog"
+                aria-hidden="true"
+              >
+                <div class="pswp__bg"></div>
+                <div class="pswp__scroll-wrap">
+                  <div class="pswp__container">
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                  </div>
+                  <div class="pswp__ui pswp__ui--hidden">
+                    <div class="pswp__top-bar">
+                      <div class="pswp__counter"></div>
+                      <button
+                        class="pswp__button pswp__button--close"
+                        title="Close (Esc)"
+                      ></button>
+                      <button
+                        class="pswp__button pswp__button--share"
+                        title="Share"
+                      ></button>
+                      <button
+                        class="pswp__button pswp__button--fs"
+                        title="Toggle fullscreen"
+                      ></button>
+                      <button
+                        class="pswp__button pswp__button--zoom"
+                        title="Zoom in/out"
+                      ></button>
+                      <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                          <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"
+                    >
+                      <div class="pswp__share-tooltip"></div>
+                    </div>
+                    <button
+                      class="pswp__button pswp__button--arrow--left"
+                      title="Previous (arrow left)"
+                    ></button>
+                    <button
+                      class="pswp__button pswp__button--arrow--right"
+                      title="Next (arrow right)"
+                    ></button>
+                    <div class="pswp__caption">
+                      <div class="pswp__caption__center"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <label class="nav" for="about">
+          <span> Information </span>
+        </label>
+
+        <input name="nav" type="radio" class="contact-radio" id="contact" />
+        <div class="page contact-page">
+          <div class="page-contents">
+            <div class="mb-3"></div>
+            <div class="row mb-3">
+              <div class="col-lg-6">
+                <div class="messages_box_area">
+                  <div class="messages_list">
+                    <div class="white_box">
+                      <div class="white_box_tittle list_header">
+                        <h4>Referee Details</h4>
+                      </div>
+
+                      <ul>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Referee Full Name:</h4>
+                                <p><%= application.r_fullname_1 %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Referee Email:</h4>
+                                <p><%= application.r_email_1 %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Referee Phone:</h4>
+                                <p><%= application.r_phone_1 %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Referee Employer:</h4>
+                                <p><%= application.r_employer_1 %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Referee Address:</h4>
+                                <p><%= application.r_address_1 %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Referee Rank:</h4>
+                                <p><%= application.r_rank_1 %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="messages_box_area">
+                  <div class="messages_list">
+                    <div class="white_box">
+                      <div class="white_box_tittle list_header">
+                        <h4>Referee Details</h4>
+                      </div>
+
+                      <ul>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Referee Full Name:</h4>
+                                <p><%= application.r_fullname_2 %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Referee Email:</h4>
+                                <p><%= application.r_email_2 %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Referee Phone:</h4>
+                                <p><%= application.r_phone_2 %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Referee Employer:</h4>
+                                <p><%= application.r_employer_2 %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Referee Address:</h4>
+                                <p><%= application.r_address_2 %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Referee Rank:</h4>
+                                <p><%= application.r_rank_2 %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+           
+            </div>
+            <div class="row mb-3">
+              <div class="col-lg-12">
+                <div class="messages_box_area">
+                  <div class="messages_list">
+                    <div class="white_box">
+                      <div class="white_box_tittle list_header">
+                        <h4>Referee Details</h4>
+                      </div>
+
+                      <ul>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Referee Full Name:</h4>
+                                <p><%= application.r_fullname_3 %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Referee Email:</h4>
+                                <p><%= application.r_email_3 %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Referee Phone:</h4>
+                                <p><%= application.r_phone_3 %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Referee Employer:</h4>
+                                <p><%= application.r_employer_3 %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Referee Address:</h4>
+                                <p><%= application.r_address_3 %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <div class="message_pre_left">
+                              <div class="messges_info">
+                                <h4>Referee Rank:</h4>
+                                <p><%= application.r_rank_3 %></p>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="white_card_body">
+              <div
+                class="row photo_gallery gallery justify-content-center"
+                id="aniimated-thumbnials"
+                itemscope=""
+              >
+                
+                <figure
+                  class="col-lg-6 col-md-6 mb_30 reveal"
+                  itemprop="associatedMedia"
+                  itemscope=""
+                >
+                  <a
+                    href="<%= application.professional_certificate %>"
+                    itemprop="contentUrl"
+                    data-size="1600x950"
+                    ><img
+                      class="img-thumbnail"
+                      src="<%= application.professional_certificate %>"
+                      itemprop="thumbnail"
+                      alt="Image description"
+                  /></a>
+                  Professional Certificate
+                </figure>
+                <figure
+                  class="col-lg-6 col-md-6 mb_30 reveal"
+                  itemprop="associatedMedia"
+                  itemscope=""
+                >
+                  <a
+                    href="<%= application.personal_statement %>"
+                    itemprop="contentUrl"
+                    data-size="1600x950"
+                    ><img
+                      class="img-thumbnail"
+                      src="<%= application.personal_statement %>"
+                      itemprop="thumbnail"
+                      alt="Image description"
+                  /></a>
+                  Personal Certificate
+                </figure>
+             
+              
+              
+              
+              </div>
+
+              <div
+                class="pswp"
+                tabindex="-1"
+                role="dialog"
+                aria-hidden="true"
+              >
+                <div class="pswp__bg"></div>
+                <div class="pswp__scroll-wrap">
+                  <div class="pswp__container">
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                  </div>
+                  <div class="pswp__ui pswp__ui--hidden">
+                    <div class="pswp__top-bar">
+                      <div class="pswp__counter"></div>
+                      <button
+                        class="pswp__button pswp__button--close"
+                        title="Close (Esc)"
+                      ></button>
+                      <button
+                        class="pswp__button pswp__button--share"
+                        title="Share"
+                      ></button>
+                      <button
+                        class="pswp__button pswp__button--fs"
+                        title="Toggle fullscreen"
+                      ></button>
+                      <button
+                        class="pswp__button pswp__button--zoom"
+                        title="Zoom in/out"
+                      ></button>
+                      <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                          <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"
+                    >
+                      <div class="pswp__share-tooltip"></div>
+                    </div>
+                    <button
+                      class="pswp__button pswp__button--arrow--left"
+                      title="Previous (arrow left)"
+                    ></button>
+                    <button
+                      class="pswp__button pswp__button--arrow--right"
+                      title="Next (arrow right)"
+                    ></button>
+                    <div class="pswp__caption">
+                      <div class="pswp__caption__center"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <label class="nav" for="contact">
+          <span> Information </span>
+        </label>
+
+      </div>
+    </div>
+
+    <div class="footer_part">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="footer_iner text-center">
+              <p>
+                ©
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                2023 - Designed by
+                <a href="https://edu-central.org">eduCENTRAL</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>

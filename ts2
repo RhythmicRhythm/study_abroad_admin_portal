@@ -1,0 +1,139 @@
+To create a structured form for your "Study Interest" application, you can divide it into several sections for clarity. Here's a breakdown of how you can organize the form:
+
+**Section 1: Study Location and Program Interest**
+- Which country would you like to go for your studies? (Required)
+- What program would you like to undertake? (Required)
+- What is your preferred course of studies? (Required)
+
+**Section 2: Admission Processing Fees**
+- Have you paid the required admission processing fees? (Required)
+- If your answer is yes, how much did you pay as the admission processing fees?
+- When did you pay the admission processing fees?
+- What name did you use to pay the admission processing fees?
+
+**Section 3: Personal Details**
+- Name (First name, middle name, last name) (Required)
+- Date of birth (Required)
+- First language
+- Country of citizenship
+- International passport number (ID)
+- International passport: date of Issue
+- International passport: expiry date
+- International passport: issuing authority
+- Gender
+- Marital Status
+- Residential/Mailing address (Required)
+- State of residence (Required)
+- Email
+- Phone number
+- Highest academic qualification (Required)
+- Date of highest educational award
+- Class of award
+- Average Grade (CGPA)
+
+**Section 4: Emergency Contact**
+- Full name of contact in case of emergency (First name, middle name, last name) (Required)
+- Address of emergency contact (Required)
+- Email of emergency contact (Required)
+- Phone number of emergency contact (Required)
+- Relationship with the emergency contact (Required)
+
+**Section 5: Test Scores**
+- Which of the following TEST OF ENGLISH have you done?
+- What was your TEST OF ENGLISH score?
+- What was the date of the TEST OF ENGLISH exam/result?
+- Which of the following OTHER LANGUAGE TEST have you done?
+- What was your score?
+- What was the date of the LANGUAGE TEST exam/result?
+- Which of the following EXAMS have you done?
+- What was your score?
+- What was the date of the EXAMS exam/result?
+
+**Section 6: Education Summary**
+- Name of secondary/high school attended (Required)
+- Country of secondary education (Required)
+- Address of secondary education attended (Required)
+- Started/attended secondary/high school from (Date)
+- Left/graduated secondary/high school on (date)
+- Secondary/high school award/certificate
+- Date of secondary/high school award/certificate
+- Grade of award
+
+**Section 7: Additional Secondary Education (if applicable)**
+- Name of other secondary/high school
+- Country of other secondary education
+- Address of other secondary education
+- Started/attended other secondary/high school from
+- Left/graduated other secondary/high school on
+- Other secondary/high school award/certificate
+- Date of other secondary/high school award/certificate
+- Grade of award
+
+**Section 8: Tertiary Education (if applicable)**
+- Name of tertiary institution attended
+- Country of tertiary institution/education
+- Address of tertiary education
+- Started/attended tertiary institution from
+- Left/graduated tertiary institution from
+- Degree Awarded
+- Date of Award
+- Grade of award
+
+**Section 9: Additional Tertiary Education (if applicable)**
+- Name of other tertiary institution attended
+- Country of other tertiary institution/education
+- Address of other tertiary institution attended
+- Started/attended other tertiary institution from
+- Left/graduated other tertiary institution on
+- Degree/certification awarded
+- Date of degree/certification awarded
+- Grade of award
+
+**Section 10: Professional Education (if applicable)**
+- Name of other tertiary/professional institution attended
+- Country of other tertiary/professional institution/education
+- Address of other tertiary/professional institution/education attended
+- Started/attended other tertiary/professional institution/education from
+- Left/graduated other tertiary/professional institution/education on
+- Degree/certification awarded
+- Date of degree/certification awarded
+- Grade of award
+
+**Section 11: Travel History**
+- Have you been refused a visa/deported from Canada, the USA, the UK, New Zealand, or Australia? (Yes/No) (Required)
+- If you chose "YES" above, please provide details of the refusal (Required)
+
+**Section 12: Referees**
+- Full name of referee 1 (Required)
+- Email of referee 1 (Required)
+- Phone number of referee 1
+- Name of employer of referee 1
+- Address of employer of referee 1
+- Rank of referee 1 at place of employment/work (Required)
+- Full name of referee 2
+- Email of referee 2
+- Phone number of referee 2
+- Name of employer of referee 2
+- Address of employer of referee 2
+- Rank of referee 2 at place of employment/work
+- Full name of referee 3 (Required)
+- Email of referee 3 (Required)
+- Phone number of referee 3 (Required)
+- Name of employer of referee 3 (Required)
+- Address of employer of referee 3 (Required)
+- Rank of referee 3 at place of employment/work (Required)
+
+
+**Section 13: Document Requirements**
+- UPLOAD CV/RESUME (PDF or WORD FORMAT only) (Required)
+- UPLOAD A RECENT PASSPORT SIZE PHOTOGRAPH -WHITE BACKGROUND (JPEG FORMAT ONLY) (Required)
+- UPLOAD DATA PAGE OF INTERNATIONAL PASSPORT (WORD, PDF OR JPEG FORMAT ONLY) (Required)
+- UPLOAD ALL SECONDARY SCHOOL CERTIFICATE plus (UNUSED/BRAND NEW) SCRATCH CARD (Required)
+- UPLOAD ALL UNDERGRADUATE CERTIFICATE plus TRANSCRIPT
+- UPLOAD ALL GRADUATE STUDIES CERTIFICATE plus TRANSCRIPT
+- UPLOAD ALL POST SECONDARY CERTIFICATE (PLUS TRANSCRIPT)
+- UPLOAD ALL PROFESSIONAL CERTIFICATE (PLUS TRANSCRIPT - where applicable)
+- UPLOAD PERSONAL STATEMENT OF (ACADEMIC) PURPOSE (Required)
+- UPLOAD PROOF OF PAYMENT OF ADMISSION PROCESSING FEES (Required)
+
+This organized structure should help you create a clear and user-friendly application form for study interest. You can use HTML and CSS to code this form, and various form validation techniques can be applied to ensure the data entered is accurate and complete.
